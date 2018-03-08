@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing aspect.isSystemObject="false" description="second" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-03-08T18:04:04.130+05:30" name="ksmbasha1" projectName="" published="false" tags="" thingTemplate="Github.Connection" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <GithubRepo>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </GithubRepo>
+                <GithubReportedUserID>
+                    <Value><![CDATA[ThingWorx System]]></Value>
+                    <Timestamp>2018-03-08T18:04:04.193+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </GithubReportedUserID>
+                <GithubReportedMessage>
+                    <Value><![CDATA[System Update]]></Value>
+                    <Timestamp>2018-03-08T18:04:04.193+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </GithubReportedMessage>
+                <GithubUserID>
+                    <Value><![CDATA[ksmbasha]]></Value>
+                    <Timestamp>2018-03-08T18:04:04.193+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </GithubUserID>
+                <GithubAccessToken>
+                    <Value><![CDATA[/NQMXqjkVIwrVAMdav63mkzO2YaCaZV/CDu1159Dw1yOLEJyzn5qSonUFFHoJ2dV]]></Value>
+                    <Timestamp>2018-03-08T18:04:04.194+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </GithubAccessToken>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Thing ksmbasha1 created programatically" timestamp="2018-03-08T18:04:04.130+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
