@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="target" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-03-08T17:54:51.241+05:30" name="Github" projectName="" rows="0.0" tags="Applications:github">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things/>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "SourceURL" : "Github.Logo",
+                  "Left" : 15,
+                  "BorderStyle" : "DefaultImageBorderStyle",
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Image",
+                  "ToolTipField" : "",
+                  "Type" : "image",
+                  "Area" : "UI",
+                  "Top" : 3,
+                  "AlternateText" : "",
+                  "Visible" : true,
+                  "DisplayName" : "Image-12",
+                  "Scaling" : "width",
+                  "Height" : 35,
+                  "PreventCaching" : false,
+                  "Id" : "Image-12",
+                  "Width" : 130
+                }
+              } ],
+              "Properties" : {
+                "Left" : 30,
+                "HideScrollbars" : false,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "HorizontalAnchor" : "left",
+                "Type" : "panel",
+                "Area" : "UI",
+                "Top" : 45,
+                "Visible" : true,
+                "DisplayName" : "Panel-11",
+                "Style" : "Github.DefaultPanelStyle",
+                "Height" : 200,
+                "Id" : "Panel-11",
+                "Width" : 300
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Left Sidebar",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-8"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "SubMenuHeight" : 25,
+                "MenuBackgroundStyle" : "DefaultContainerStyle",
+                "Left" : 115,
+                "AllButTopRememberLastChoice" : true,
+                "MenuSelectedStyle" : "Github.Label",
+                "ShowDataLoading" : true,
+                "MenuItemDisplay" : "iconleftoftext",
+                "Alignment" : "left",
+                "Visible" : true,
+                "DisplayName" : "Menu-13",
+                "Height" : 30,
+                "Menu" : "Github.MainMenu",
+                "EvenlySpacedMenuItems" : false,
+                "Width" : 250,
+                "DrivePageMashupOrBindToMashup" : "pagemashup",
+                "MenuLevelSelectedStyle" : "DefaultMenuLevelSelectedStyle",
+                "ResponsiveLayout" : true,
+                "Z-index" : 10,
+                "IconMaxWidth" : 22,
+                "View" : "horiz",
+                "MenuLevelStyle" : "DefaultMenuLevelStyle",
+                "MenuLevelHoverStyle" : "DefaultMenuLevelHoverStyle",
+                "__TypeDisplayName" : "Menu",
+                "Type" : "menu",
+                "Area" : "UI",
+                "MenuHoverStyle" : "Github.DefaultRowAlternateBackgroundStyle",
+                "ConfiguredOrDataDriven" : "configured",
+                "Top" : 15,
+                "SubmenuWidthMatchParent" : false,
+                "Levels" : "all",
+                "MenuStyle" : "Github.KPILabel3",
+                "Id" : "Menu-13"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Column 1",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-9"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 215,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Label",
+                  "ToolTipField" : "",
+                  "Type" : "label",
+                  "Area" : "UI",
+                  "Alignment" : "left",
+                  "Top" : 12,
+                  "Visible" : true,
+                  "DisplayName" : "Label-15",
+                  "Style" : "Github.Label",
+                  "Height" : 22,
+                  "Id" : "Label-15",
+                  "Width" : 90
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "DynamicRangeMinimum" : 0,
+                  "Left" : 175,
+                  "ShapeFormatter_StateParameters" : [ ],
+                  "DynamicFillOrientation" : "vertical",
+                  "ResponsiveLayout" : false,
+                  "ShapeType" : "roundrect",
+                  "ShowDataLoading" : true,
+                  "Z-index" : 9,
+                  "RectangleCornerRadius" : 10,
+                  "EnableDynamicFill" : false,
+                  "__TypeDisplayName" : "Shape",
+                  "Type" : "shape",
+                  "Area" : "UI",
+                  "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                  "Top" : 8,
+                  "DynamicRangeMaximum" : 100,
+                  "GradientType" : "linear",
+                  "GradientOrientation" : "vertical",
+                  "Visible" : true,
+                  "DisplayName" : "Shape-16",
+                  "ShapeStyle" : {
+                    "image" : "",
+                    "backgroundColor" : "#ffffff",
+                    "textSize" : "normal",
+                    "lineStyle" : "solid",
+                    "fontEmphasisItalic" : false,
+                    "fontEmphasisUnderline" : false,
+                    "displayString" : "",
+                    "lineThickness" : 1,
+                    "foregroundColor" : "",
+                    "lineColor" : "",
+                    "fontEmphasisBold" : false,
+                    "secondaryBackgroundColor" : ""
+                  },
+                  "Height" : 30,
+                  "Id" : "Shape-16",
+                  "Width" : 145
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "SourceURL" : "MonitoringUserIcon",
+                  "Left" : 190,
+                  "BorderStyle" : "DefaultImageBorderStyle",
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Image",
+                  "ToolTipField" : "",
+                  "Type" : "image",
+                  "Area" : "UI",
+                  "Top" : 13,
+                  "AlternateText" : "",
+                  "Visible" : true,
+                  "DisplayName" : "Image-17",
+                  "Scaling" : "width",
+                  "Height" : 20,
+                  "PreventCaching" : false,
+                  "Id" : "Image-17",
+                  "Width" : 20
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "SourceURL" : "ThingWorxSystemTargetLogo",
+                  "Left" : 55,
+                  "BorderStyle" : "DefaultImageBorderStyle",
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Image",
+                  "ToolTipField" : "",
+                  "Type" : "image",
+                  "Area" : "UI",
+                  "Top" : 12,
+                  "AlternateText" : "",
+                  "Visible" : true,
+                  "DisplayName" : "Image-20",
+                  "Scaling" : "width",
+                  "Height" : 30,
+                  "PreventCaching" : false,
+                  "Id" : "Image-20",
+                  "Width" : 100
+                }
+              } ],
+              "Properties" : {
+                "Left" : 70,
+                "HideScrollbars" : false,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "HorizontalAnchor" : "left",
+                "Type" : "panel",
+                "Area" : "UI",
+                "Top" : 5,
+                "Visible" : true,
+                "DisplayName" : "Panel-14",
+                "Style" : {
+                  "image" : "",
+                  "backgroundColor" : "",
+                  "textSize" : "normal",
+                  "lineStyle" : "solid",
+                  "displayString" : "",
+                  "fontEmphasisUnderline" : false,
+                  "fontEmphasisItalic" : false,
+                  "lineThickness" : 1,
+                  "lineColor" : "",
+                  "foregroundColor" : "",
+                  "fontEmphasisBold" : false,
+                  "secondaryBackgroundColor" : ""
+                },
+                "Height" : 200,
+                "Id" : "Panel-14",
+                "Width" : 300
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Right Sidebar",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-10"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 130,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 0,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 50,
+            "PctRow1" : 50,
+            "FooterHeight" : 0,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "Visible" : true,
+            "PctColumn5" : 1,
+            "RightSidebar" : true,
+            "DisplayName" : "Layout-7",
+            "LeftSidebar" : true,
+            "PctColumn6" : 1,
+            "PrintWidth" : 650,
+            "PctColumn3" : 1,
+            "PctColumn4" : 1,
+            "PctColumn1" : 100,
+            "PctColumn2" : 0,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 0,
+            "RightSidebarWidth" : 380,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "ResponsiveLayout" : true,
+            "PctColumn8" : 1,
+            "Columns" : 1,
+            "Z-index" : 10,
+            "Spacing" : 2,
+            "Orientation" : "horizontal",
+            "__TypeDisplayName" : "Layout",
+            "Type" : "layout",
+            "Area" : "UI",
+            "LeftSidebarWidth" : 240,
+            "Header" : false,
+            "Top" : 35,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "Layout-7"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "Visible" : true,
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "DisplayName" : "Header",
+          "Style" : "Github.DefaultPanelStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "TabOffset" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Type" : "container",
+          "Area" : "UI",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "Left" : 0,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "__TypeDisplayName" : "Page Mashup Container",
+                "Name" : "",
+                "Type" : "pagemashupcontainer",
+                "Area" : "UI",
+                "Top" : 0,
+                "Visible" : true,
+                "DisplayName" : "Page Mashup",
+                "Height" : 300,
+                "Id" : "pagemashupcontainer-6",
+                "Width" : 400
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Page Mashup Container",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-5"
+            }
+          } ],
+          "Properties" : {
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 0,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 50,
+            "PctRow1" : 50,
+            "FooterHeight" : 0,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "Visible" : true,
+            "PctColumn5" : 1,
+            "RightSidebar" : false,
+            "DisplayName" : "Content Layout",
+            "LeftSidebar" : false,
+            "PctColumn6" : 1,
+            "PrintWidth" : 650,
+            "PctColumn3" : 1,
+            "PctColumn4" : 1,
+            "PctColumn1" : 100,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 0,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "ResponsiveLayout" : true,
+            "PctColumn8" : 1,
+            "Columns" : 1,
+            "Z-index" : 10,
+            "Spacing" : 2,
+            "Orientation" : "horizontal",
+            "__TypeDisplayName" : "Layout",
+            "Type" : "layout",
+            "Area" : "UI",
+            "LeftSidebarWidth" : 0,
+            "Header" : false,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "layout-4"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "Visible" : true,
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "DisplayName" : "Content",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "TabOffset" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Type" : "container",
+          "Area" : "UI",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-3"
+        }
+      } ],
+      "Properties" : {
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 50,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 50,
+        "PctRow1" : 100,
+        "FooterHeight" : 0,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "Visible" : true,
+        "PctColumn5" : 1,
+        "RightSidebar" : false,
+        "DisplayName" : "Master Layout",
+        "LeftSidebar" : false,
+        "PctColumn6" : 1,
+        "PrintWidth" : 650,
+        "PctColumn3" : 1,
+        "PctColumn4" : 1,
+        "PctColumn1" : 50,
+        "PctColumn2" : 50,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 1,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "ResponsiveLayout" : true,
+        "PctColumn8" : 1,
+        "Columns" : 0,
+        "Z-index" : 10,
+        "Spacing" : 2,
+        "Orientation" : "vertical",
+        "__TypeDisplayName" : "Layout",
+        "Type" : "layout",
+        "Area" : "UI",
+        "LeftSidebarWidth" : 0,
+        "Header" : true,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "id_index" : 20,
+      "Font" : "Arial, Helvetica",
+      "supportsAutoResize" : true,
+      "MaxWidth" : 0,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : {
+        "image" : "",
+        "backgroundColor" : "#ffffff",
+        "textSize" : "normal",
+        "lineStyle" : "solid",
+        "displayString" : "",
+        "fontEmphasisUnderline" : false,
+        "fontEmphasisItalic" : false,
+        "lineThickness" : 0,
+        "lineColor" : "",
+        "foregroundColor" : "",
+        "fontEmphasisBold" : false,
+        "secondaryBackgroundColor" : ""
+      },
+      "BGImageSize" : "auto",
+      "Height" : 768,
+      "Width" : 1024,
+      "WindowStyle" : "DefaultMasterWindowStyle",
+      "ResponsiveLayout" : true,
+      "Z-index" : 10,
+      "Title" : "",
+      "MinWidth" : 0,
+      "DropShadow" : false,
+      "__TypeDisplayName" : "Master Mashup",
+      "Type" : "targetmashup",
+      "Area" : "Mashup",
+      "Top" : 0,
+      "Id" : "mashup-root"
+    }
+  },
+  "mashupType" : "targetmashup",
+  "Events" : [ ],
+  "DataBindings" : [ {
+    "SourceArea" : "UserExtensions",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "UserExtensions",
+    "SourceSection" : "UserExtensions",
+    "Id" : "03b1a350-ae22-4546-8e80-8cc31e231384",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "name"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "Label-15"
+  } ],
+  "Data" : {
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-06-22T09:02:11.528+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-28T10:08:52.085+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-28T10:10:06.532+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-28T10:11:27.454+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-28T10:11:40.806+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-28T11:06:03.273+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T18:29:54.492+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T18:32:02.382+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T18:32:25.768+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T18:42:28.693+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T18:43:31.294+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T19:11:18.461+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-06-30T19:11:27.897+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T22:00:05.821+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T22:00:40.585+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T22:02:53.470+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T22:03:07.456+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T22:03:27.513+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T22:04:42.076+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T23:58:17.798+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T23:58:52.276+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T23:59:13.162+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-28T23:59:43.450+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-29T00:00:22.863+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-29T00:00:37.734+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-01T00:29:05.049+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-01T07:39:48.656+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T08:53:35.560+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T08:54:57.532+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T08:56:03.410+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T08:56:18.904+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T08:57:11.468+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T09:36:58.519+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-02T23:58:01.645+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-03T22:46:19.216+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T22:48:33.137+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T22:49:37.701+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T03:05:35.519+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T03:05:39.876+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T03:07:49.039+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T03:08:14.092+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T04:19:16.632+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T04:19:36.686+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T06:30:24.054+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T06:31:14.226+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T06:33:34.082+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T06:34:04.889+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T06:36:45.561+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-11T19:10:23.933+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-09-11T19:11:45.324+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-09-11T19:20:34.315+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:25:00.947+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T23:53:06.529+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T00:44:20.329+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-21T16:48:56.189+05:30" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:24:42.254+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:25:36.836+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T02:26:24.324+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:26:59.770+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2018-03-08T12:39:49.760+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2018-03-08T17:54:51.241+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
