@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing aspect.isSystemObject="false" description="integrating github" documentationContent="" effectiveThingPackage="FileRepositoryThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-03-08T13:26:37.317+05:30" name="Githubtestrepo" projectName="" published="false" tags="" thingTemplate="Github.FileRepository" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <GithubConnection>
+                    <Value><![CDATA[Githubtestconn]]></Value>
+                    <Timestamp>2018-03-08T13:26:37.788+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </GithubConnection>
+                <TagsToExport>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </TagsToExport>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Thing Githubtestrepo created programatically" timestamp="2018-03-08T13:26:37.317+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
