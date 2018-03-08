@@ -1,0 +1,2202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-03-08T18:05:37.617+05:30" name="Github.Home" projectName="" rows="0.0" tags="Applications:github">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>Github.Services</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates>
+                <ThingTemplate>Github.Connection</ThingTemplate>
+                <ThingTemplate>Github.FileRepository</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 10,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "Getting Started",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 15,
+              "Visible" : true,
+              "DisplayName" : "Label-5",
+              "Style" : "Github.LabelLarge",
+              "Height" : 22,
+              "Id" : "Label-5",
+              "Width" : 215
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 30,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "- If you are in a first time setup, press the Create New button on the top right to create a new connection to a Github Repository. Otherwise, select the Github configuration from the grid. ",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 50,
+              "Visible" : true,
+              "DisplayName" : "Label-10",
+              "Style" : "Github.Label",
+              "Height" : 67,
+              "Id" : "Label-10",
+              "Width" : 385
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 30,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "- Once the github connection is made, you now need to associate the connection in ThingWorx to the repository in Github. Select from the dropdown otherwise press the Create Github Repository button.",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 124.99998474121094,
+              "Visible" : true,
+              "DisplayName" : "Label-12",
+              "Style" : "Github.Label",
+              "Height" : 77,
+              "Id" : "Label-12",
+              "Width" : 385
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 30,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "- Now you need to indicate in ThingWorx, what application tags you want to export to Github. Press the tags button to select those tags and then press Update Configuration. ",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 200,
+              "Visible" : true,
+              "DisplayName" : "Label-71",
+              "Style" : "Github.Label",
+              "Height" : 77,
+              "Id" : "Label-71",
+              "Width" : 385
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 30,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "- Once you update the configuration, any changes made to any entity tagged with the tags selected in the configuration will be uploaded to Github on a timing basis. There are two different settings that can be made. First is the GithubScheduler. This schedule is what controls how often the server looks for changes and exports the data. This defaults to look every 2 minutes. The next is a timer called GithubTimer. This defaults to once a minute and will transfer the files from the export to Github. If you want to make changes, go to Composer to make these changes. ",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 274.99998474121094,
+              "Visible" : true,
+              "DisplayName" : "Label-72",
+              "Style" : "Github.Label",
+              "Height" : 187,
+              "Id" : "Label-72",
+              "Width" : 385
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 25,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "- You can apply a version tag to all entities that are tagged with the above marked tag for this repository. If you tag with a version tag, the version will show in Github as well as the comments entered in ThingWorx on save. If the only thing you have done is add a version tag, you will need to perform a full export to export all entities with that version tag.",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 504.99998474121094,
+              "Visible" : true,
+              "DisplayName" : "Label-77",
+              "Style" : "Github.Label",
+              "Height" : 142,
+              "Id" : "Label-77",
+              "Width" : 385
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 25,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Z-index" : 10,
+              "Text" : "- You may also want to perform a full export the first time this Github package is loaded onto a ThingWorx server since the normal process is only looking for changes to be exported and uploaded.",
+              "__TypeDisplayName" : "Label",
+              "ToolTipField" : "",
+              "Type" : "label",
+              "Area" : "UI",
+              "Alignment" : "left",
+              "Top" : 654.9999542236328,
+              "Visible" : true,
+              "DisplayName" : "Label-78",
+              "Style" : "Github.Label",
+              "Height" : 92,
+              "Id" : "Label-78",
+              "Width" : 385
+            }
+          } ],
+          "Properties" : {
+            "Left" : 115,
+            "HideScrollbars" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "Z-index" : 10,
+            "VerticalAnchor" : "top",
+            "__TypeDisplayName" : "Panel",
+            "HorizontalAnchor" : "left",
+            "Type" : "panel",
+            "Area" : "UI",
+            "Top" : 135,
+            "Visible" : true,
+            "DisplayName" : "Panel-4",
+            "Style" : "Github.PanelStyle",
+            "Height" : 200,
+            "Id" : "Panel-4",
+            "Width" : 300
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "Visible" : true,
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "DisplayName" : "Left Sidebar",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "TabOffset" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Type" : "container",
+          "Area" : "UI",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ {
+                  "Widgets" : [ {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 10,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Z-index" : 10,
+                      "Text" : "ThingWorx Configuration for Github",
+                      "__TypeDisplayName" : "Label",
+                      "ToolTipField" : "",
+                      "Type" : "label",
+                      "Area" : "UI",
+                      "Alignment" : "left",
+                      "Top" : 12,
+                      "Visible" : true,
+                      "DisplayName" : "Label-7",
+                      "Style" : "Github.LabelLarge",
+                      "Height" : 27,
+                      "Id" : "Label-7",
+                      "Width" : 320
+                    }
+                  } ],
+                  "Properties" : {
+                    "Left" : 115,
+                    "HideScrollbars" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "VerticalAnchor" : "top",
+                    "__TypeDisplayName" : "Panel",
+                    "HorizontalAnchor" : "left",
+                    "Type" : "panel",
+                    "Area" : "UI",
+                    "Top" : 135,
+                    "Visible" : true,
+                    "DisplayName" : "Panel-6",
+                    "Style" : "Github.PanelStyle",
+                    "Height" : 200,
+                    "Id" : "Panel-6",
+                    "Width" : 300
+                  }
+                } ],
+                "Properties" : {
+                  "MinHeight" : 0,
+                  "TabWidth" : 36,
+                  "BGImageRepeat" : "no-repeat",
+                  "ShowDataLoading" : true,
+                  "ShowExpandCollapseTab" : false,
+                  "ExpandCollapseTabLocation" : "outside",
+                  "Visible" : true,
+                  "TabExpandStyle" : "DefaultTabExpandStyle",
+                  "DisplayName" : "Column 1",
+                  "Style" : "DefaultContainerStyle",
+                  "BGImageSize" : "auto",
+                  "Overlay" : false,
+                  "Expanded" : true,
+                  "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                  "OverlayIsTransparent" : false,
+                  "ResponsiveLayout" : true,
+                  "Z-index" : 10,
+                  "MinWidth" : 0,
+                  "TabOffset" : 0,
+                  "__TypeDisplayName" : "Container",
+                  "TabLocation" : "center",
+                  "Type" : "container",
+                  "Area" : "UI",
+                  "AnimateExpandCollapse" : true,
+                  "TabHeight" : 36,
+                  "Id" : "container-58"
+                }
+              }, {
+                "Widgets" : [ {
+                  "Widgets" : [ {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "NavigationHoverStyle" : "Github.ButtonHoverStyle2",
+                      "Left" : 10,
+                      "ShowDataLoading" : true,
+                      "TargetWindow" : "popup",
+                      "ModalPopupOpacity" : 0.5,
+                      "ShowCloseButton" : true,
+                      "TabSequence" : 0,
+                      "FixedPopupHeight" : 420,
+                      "ToolTipField" : "",
+                      "Alignment" : "center",
+                      "IconAlignment" : "left",
+                      "Visible" : true,
+                      "DisplayName" : "Navigation-62",
+                      "Style" : "Github.ButtonStyle2",
+                      "Height" : 25,
+                      "Width" : 95,
+                      "PopupScrolling" : "visible",
+                      "ReloadOnReplace" : false,
+                      "PopupTitle" : "",
+                      "ShowMessageIfNoMashup" : false,
+                      "ClickOutsideToClose" : false,
+                      "MashupName" : "Github.CreateNewConfiguration",
+                      "ResponsiveLayout" : false,
+                      "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                      "MashupParameters" : [ ],
+                      "Z-index" : 10,
+                      "FixedPopupWidth" : 825,
+                      "Text" : "Create New",
+                      "RoundedCorners" : true,
+                      "__TypeDisplayName" : "Navigation",
+                      "MessageToShow" : "Mashup must be selected",
+                      "Type" : "navigation",
+                      "Area" : "UI",
+                      "Top" : 12,
+                      "Transparent" : false,
+                      "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                      "Id" : "Navigation-62",
+                      "NavigationActiveStyle" : "Github.ButtonHoverStyle2"
+                    }
+                  } ],
+                  "Properties" : {
+                    "Left" : 115,
+                    "HideScrollbars" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "VerticalAnchor" : "top",
+                    "__TypeDisplayName" : "Panel",
+                    "HorizontalAnchor" : "left",
+                    "Type" : "panel",
+                    "Area" : "UI",
+                    "Top" : 135,
+                    "Visible" : true,
+                    "DisplayName" : "Panel-60",
+                    "Style" : "Github.PanelStyle",
+                    "Height" : 200,
+                    "Id" : "Panel-60",
+                    "Width" : 300
+                  }
+                } ],
+                "Properties" : {
+                  "MinHeight" : 0,
+                  "TabWidth" : 36,
+                  "BGImageRepeat" : "no-repeat",
+                  "ShowDataLoading" : true,
+                  "ShowExpandCollapseTab" : false,
+                  "ExpandCollapseTabLocation" : "outside",
+                  "Visible" : true,
+                  "TabExpandStyle" : "DefaultTabExpandStyle",
+                  "DisplayName" : "Right Sidebar",
+                  "Style" : "DefaultContainerStyle",
+                  "BGImageSize" : "auto",
+                  "Overlay" : false,
+                  "Expanded" : true,
+                  "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                  "OverlayIsTransparent" : false,
+                  "ResponsiveLayout" : true,
+                  "Z-index" : 10,
+                  "MinWidth" : 0,
+                  "TabOffset" : 0,
+                  "__TypeDisplayName" : "Container",
+                  "TabLocation" : "center",
+                  "Type" : "container",
+                  "Area" : "UI",
+                  "AnimateExpandCollapse" : true,
+                  "TabHeight" : 36,
+                  "Id" : "container-59"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 215,
+                "IncludeSpacingInFixedAreas" : false,
+                "ShowDataLoading" : true,
+                "HeaderHeight" : 0,
+                "PctRow4" : 0,
+                "PctRow3" : 0,
+                "PctRow2" : 50,
+                "PctRow1" : 50,
+                "FooterHeight" : 0,
+                "PctRow8" : 0,
+                "PctRow7" : 0,
+                "PctRow6" : 0,
+                "PctRow5" : 0,
+                "Visible" : true,
+                "PctColumn5" : 1,
+                "RightSidebar" : true,
+                "DisplayName" : "Layout-57",
+                "LeftSidebar" : false,
+                "PctColumn6" : 1,
+                "PrintWidth" : 650,
+                "PctColumn3" : 1,
+                "PctColumn4" : 1,
+                "PctColumn1" : 100,
+                "PctColumn2" : 0,
+                "PrintMarginTopBottom" : 0.5,
+                "Rows" : 0,
+                "RightSidebarWidth" : 150,
+                "PrintMarginLeftRight" : 0.5,
+                "PctColumn7" : 1,
+                "ResponsiveLayout" : true,
+                "PctColumn8" : 1,
+                "Columns" : 1,
+                "Z-index" : 10,
+                "Spacing" : 0,
+                "Orientation" : "horizontal",
+                "__TypeDisplayName" : "Layout",
+                "Type" : "layout",
+                "Area" : "UI",
+                "LeftSidebarWidth" : 0,
+                "Header" : false,
+                "Top" : 25,
+                "IsPrintLayout" : false,
+                "Footer" : false,
+                "Id" : "Layout-57"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Header",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-12"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                "IsEditable" : false,
+                "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                "Left" : 75,
+                "ShowDataLoading" : true,
+                "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                "FocusStyle" : "DefaultFocusStyle",
+                "RowFormat_StateParameters" : [ ],
+                "TabSequence" : 0,
+                "GridBackgroundStyle" : "Github.GridStyle",
+                "CellTextWrapping" : false,
+                "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                "Visible" : true,
+                "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                "DisplayName" : "Grid-15",
+                "Height" : 200,
+                "Width" : 400,
+                "MultiSelect" : false,
+                "CurrentScrollTop" : 0,
+                "ResponsiveLayout" : true,
+                "Z-index" : 10,
+                "ShowAllColumns" : false,
+                "AlignHeader" : false,
+                "__TypeDisplayName" : "Grid",
+                "ScrollTop" : 0,
+                "RowHeight" : 30,
+                "ColumnFormat" : {
+                  "formatInfo" : [ {
+                    "ValidationMessage" : "",
+                    "Align" : "left",
+                    "AllowEdit" : false,
+                    "ValidationExpression" : "",
+                    "Title" : "Connection Thing Name",
+                    "FormatOptions" : {
+                      "renderer" : "STRING",
+                      "formatInfo" : {
+                        "StateFormats" : [ {
+                          "stateName" : "fixed",
+                          "state" : ""
+                        } ],
+                        "StateDefinition" : "",
+                        "StateDefinitionType" : "fixed",
+                        "FieldName" : ""
+                      },
+                      "FormatString" : "full"
+                    },
+                    "FieldName" : "GithubConnectionName",
+                    "Width" : "auto"
+                  }, {
+                    "ValidationMessage" : "",
+                    "Align" : "left",
+                    "AllowEdit" : false,
+                    "ValidationExpression" : "",
+                    "Title" : "File Repository Thing Name",
+                    "FormatOptions" : {
+                      "renderer" : "STRING",
+                      "formatInfo" : {
+                        "StateFormats" : [ {
+                          "stateName" : "fixed",
+                          "state" : ""
+                        } ],
+                        "StateDefinition" : "",
+                        "StateDefinitionType" : "fixed",
+                        "FieldName" : ""
+                      },
+                      "FormatString" : "full"
+                    },
+                    "FieldName" : "GithubFileRepoName",
+                    "Width" : "auto"
+                  }, {
+                    "ValidationMessage" : "",
+                    "Align" : "left",
+                    "AllowEdit" : false,
+                    "ValidationExpression" : "",
+                    "Title" : "Description",
+                    "FormatOptions" : {
+                      "renderer" : "STRING",
+                      "formatInfo" : {
+                        "StateFormats" : [ {
+                          "stateName" : "fixed",
+                          "state" : ""
+                        } ],
+                        "StateDefinition" : "",
+                        "StateDefinitionType" : "fixed",
+                        "FieldName" : ""
+                      },
+                      "FormatString" : "full"
+                    },
+                    "FieldName" : "description",
+                    "Width" : "auto"
+                  } ]
+                },
+                "Type" : "dhxgrid",
+                "Area" : "UI",
+                "Top" : 40,
+                "IsPrintLayout" : false,
+                "Id" : "Grid-15",
+                "RowHoverStyle" : "DefaultRowHoverStyle",
+                "AutoSelectFirstRow" : true,
+                "GridHeaderTextCase" : "capitalize"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Row 1",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-13"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 165,
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ShowDataLoading" : true,
+                    "Label" : "",
+                    "TabSequence" : 0,
+                    "PlaceholderText" : "",
+                    "ToolTipField" : "",
+                    "TextAlign" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Textbox-19",
+                    "Style" : "DefaultTextBoxStyle",
+                    "Height" : 24,
+                    "Width" : 350,
+                    "ReadOnly" : false,
+                    "__supportsLabel" : true,
+                    "InnerShadow" : true,
+                    "ResponsiveLayout" : false,
+                    "Z-index" : 10,
+                    "LabelAlignment" : "left",
+                    "Text" : "",
+                    "__TypeDisplayName" : "Textbox",
+                    "Type" : "textbox",
+                    "Area" : "UI",
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "MaskInputCharacters" : false,
+                    "Top" : 10,
+                    "CursorPosition" : 0,
+                    "Id" : "Textbox-19"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 30,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "Github Account ID:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 11,
+                    "Visible" : true,
+                    "DisplayName" : "Github UserID",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-17",
+                    "Width" : 130
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 165,
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ShowDataLoading" : true,
+                    "Label" : "",
+                    "TabSequence" : 0,
+                    "PlaceholderText" : "",
+                    "ToolTipField" : "",
+                    "TextAlign" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Textbox-20",
+                    "Style" : "DefaultTextBoxStyle",
+                    "Height" : 24,
+                    "Width" : 350,
+                    "ReadOnly" : false,
+                    "__supportsLabel" : true,
+                    "InnerShadow" : true,
+                    "ResponsiveLayout" : false,
+                    "Z-index" : 10,
+                    "LabelAlignment" : "left",
+                    "Text" : "****",
+                    "__TypeDisplayName" : "Textbox",
+                    "Type" : "textbox",
+                    "Area" : "UI",
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "MaskInputCharacters" : true,
+                    "Top" : 39,
+                    "CursorPosition" : 0,
+                    "Id" : "Textbox-20"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 30,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "Github Access Token:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 40,
+                    "Visible" : true,
+                    "DisplayName" : "Label-21",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-21",
+                    "Width" : 130
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 30,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "Github Repository:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 70,
+                    "Visible" : true,
+                    "DisplayName" : "Label-23",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-23",
+                    "Width" : 130
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 165,
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ShowDataLoading" : true,
+                    "Label" : "",
+                    "TabSequence" : 0,
+                    "PlaceholderText" : "",
+                    "ToolTipField" : "",
+                    "TextAlign" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Textbox-25",
+                    "Style" : "DefaultTextBoxStyle",
+                    "Height" : 24,
+                    "Width" : 350,
+                    "ReadOnly" : false,
+                    "__supportsLabel" : true,
+                    "InnerShadow" : true,
+                    "ResponsiveLayout" : false,
+                    "Z-index" : 10,
+                    "LabelAlignment" : "left",
+                    "Text" : "",
+                    "__TypeDisplayName" : "Textbox",
+                    "Type" : "textbox",
+                    "Area" : "UI",
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "MaskInputCharacters" : false,
+                    "Top" : 99,
+                    "CursorPosition" : 0,
+                    "Id" : "Textbox-25"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 30,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "Default Checkin Msg:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 100,
+                    "Visible" : true,
+                    "DisplayName" : "Label-26",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-26",
+                    "Width" : 130
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 165,
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ShowDataLoading" : true,
+                    "Label" : "",
+                    "TabSequence" : 0,
+                    "PlaceholderText" : "",
+                    "ToolTipField" : "",
+                    "TextAlign" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Textbox-27",
+                    "Style" : "DefaultTextBoxStyle",
+                    "Height" : 24,
+                    "Width" : 350,
+                    "ReadOnly" : false,
+                    "__supportsLabel" : true,
+                    "InnerShadow" : true,
+                    "ResponsiveLayout" : false,
+                    "Z-index" : 10,
+                    "LabelAlignment" : "left",
+                    "Text" : "",
+                    "__TypeDisplayName" : "Textbox",
+                    "Type" : "textbox",
+                    "Area" : "UI",
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "MaskInputCharacters" : false,
+                    "Top" : 129,
+                    "CursorPosition" : 0,
+                    "Id" : "Textbox-27"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 30,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "Default Reported User:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 130,
+                    "Visible" : true,
+                    "DisplayName" : "Label-28",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-28",
+                    "Width" : 130
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "ThingWorx Tags to export:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 159,
+                    "Visible" : true,
+                    "DisplayName" : "Label-29",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-29",
+                    "Width" : 150
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "MultiSelect" : true,
+                    "Left" : 170,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Tag Picker",
+                    "TagType" : "ModelTags",
+                    "Type" : "tagpicker",
+                    "Area" : "UI",
+                    "Top" : 159,
+                    "VocabularyRestriction" : "",
+                    "Visible" : true,
+                    "DisplayName" : "TagPicker-30",
+                    "Height" : 18,
+                    "Id" : "TagPicker-30",
+                    "Width" : 35
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 170,
+                    "CancelConfirmationButton" : "button2",
+                    "ShowDataLoading" : true,
+                    "Label" : "Update Configuration",
+                    "FocusStyle" : "Github.ButtonHoverStyle2",
+                    "TabSequence" : 0,
+                    "ToolTipField" : "",
+                    "IconAlignment" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Button-31",
+                    "Style" : "Github.ButtonStyle2",
+                    "Height" : 30,
+                    "DisabledStyle" : "DefaultButtonDisabledStyle",
+                    "Disabled" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "Width" : 340,
+                    "ResponsiveLayout" : false,
+                    "ConfirmationPrompt" : "Do Action?",
+                    "Z-index" : 10,
+                    "ConfirmationButton1Label" : "Yes",
+                    "RoundedCorners" : true,
+                    "__TypeDisplayName" : "Button",
+                    "HoverStyle" : "Github.ButtonHoverStyle2",
+                    "Type" : "button",
+                    "Area" : "UI",
+                    "Top" : 189,
+                    "DefaultConfirmationButton" : "button1",
+                    "ContextId" : "",
+                    "ConfirmationRequired" : false,
+                    "Id" : "Button-31",
+                    "ConfirmationButton2Label" : "No",
+                    "ActiveStyle" : "Github.ButtonHoverStyle2"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "DataChangeType" : "ALWAYS",
+                    "Left" : 0,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "Type" : "expression",
+                    "Area" : "UI",
+                    "Top" : 225,
+                    "FireOnFirstValue" : false,
+                    "Expression" : "value = \"********\"",
+                    "Visible" : true,
+                    "DisplayName" : "Expression-66",
+                    "Height" : 28,
+                    "AutoEvaluate" : false,
+                    "Id" : "Expression-66",
+                    "OutputBaseType" : "STRING",
+                    "Width" : 200
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "NavigationHoverStyle" : "Github.ButtonHoverStyle2",
+                    "Left" : 520,
+                    "ShowDataLoading" : true,
+                    "TargetWindow" : "popup",
+                    "ModalPopupOpacity" : 0.5,
+                    "ShowCloseButton" : true,
+                    "TabSequence" : 0,
+                    "FixedPopupHeight" : 115,
+                    "ToolTipField" : "",
+                    "Alignment" : "center",
+                    "IconAlignment" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Navigation-68",
+                    "Style" : "Github.ButtonStyle2",
+                    "Height" : 25,
+                    "Width" : 135,
+                    "PopupScrolling" : "visible",
+                    "ReloadOnReplace" : false,
+                    "PopupTitle" : "",
+                    "ShowMessageIfNoMashup" : false,
+                    "ClickOutsideToClose" : false,
+                    "MashupName" : "Github.CreateNewRepo",
+                    "ResponsiveLayout" : false,
+                    "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                    "MashupParameters" : [ {
+                      "Description" : "",
+                      "BaseType" : "STRING",
+                      "ParmDef" : {
+                        "name" : "selectRepo",
+                        "aspects" : {
+                          "ordinal" : "1"
+                        },
+                        "description" : "",
+                        "baseType" : "STRING",
+                        "ordinal" : 0
+                      },
+                      "ParameterName" : "selectRepo"
+                    }, {
+                      "Description" : "",
+                      "BaseType" : "THINGNAME",
+                      "ParmDef" : {
+                        "name" : "githubConnection",
+                        "aspects" : {
+                          "ordinal" : "0"
+                        },
+                        "description" : "",
+                        "baseType" : "THINGNAME",
+                        "ordinal" : 0
+                      },
+                      "ParameterName" : "githubConnection"
+                    } ],
+                    "Z-index" : 10,
+                    "FixedPopupWidth" : 825,
+                    "Text" : "Create Github Repo",
+                    "RoundedCorners" : true,
+                    "__TypeDisplayName" : "Navigation",
+                    "MessageToShow" : "Mashup must be selected",
+                    "Type" : "navigation",
+                    "Area" : "UI",
+                    "Top" : 69,
+                    "Transparent" : false,
+                    "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                    "Id" : "Navigation-68",
+                    "NavigationActiveStyle" : "Github.ButtonHoverStyle2"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 165,
+                    "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                    "ShowDataLoading" : true,
+                    "Label" : "",
+                    "Alignment" : "left",
+                    "DropdownStyle" : "DefaultDropdownStyle",
+                    "DisplayField" : "name",
+                    "Visible" : true,
+                    "DisplayName" : "List-69",
+                    "Height" : 24,
+                    "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                    "Width" : 350,
+                    "DropdownButtonStyle" : "DefaultDropdownButtonStyle",
+                    "ListLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                    "ClearIfNoSelection" : false,
+                    "MultiSelect" : false,
+                    "__supportsLabel" : true,
+                    "ResponsiveLayout" : false,
+                    "Z-index" : 10,
+                    "LabelAlignment" : "left",
+                    "HeightOfDropdownView" : 200,
+                    "View" : "dropdown",
+                    "__TypeDisplayName" : "List",
+                    "ListItemStyle" : "DefaultListItemStyle",
+                    "RowHeight" : 28,
+                    "NumberOfItemsInDropdownView" : 6,
+                    "Type" : "dhxlist",
+                    "Area" : "UI",
+                    "Top" : 70,
+                    "DropdownSelectedStyle" : "DefaultDropdownSelectedStyle",
+                    "Id" : "List-69",
+                    "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                    "AutoSelectFirstRow" : false
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 169.98577880859375,
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ShowDataLoading" : true,
+                    "Label" : "",
+                    "TabSequence" : 0,
+                    "PlaceholderText" : "",
+                    "ToolTipField" : "",
+                    "TextAlign" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Textbox-73",
+                    "Style" : "DefaultTextBoxStyle",
+                    "Height" : 24,
+                    "Width" : 350,
+                    "ReadOnly" : false,
+                    "__supportsLabel" : true,
+                    "InnerShadow" : true,
+                    "ResponsiveLayout" : false,
+                    "Z-index" : 10,
+                    "LabelAlignment" : "left",
+                    "Text" : "",
+                    "__TypeDisplayName" : "Textbox",
+                    "Type" : "textbox",
+                    "Area" : "UI",
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "MaskInputCharacters" : false,
+                    "Top" : 284.99998474121094,
+                    "CursorPosition" : 0,
+                    "Id" : "Textbox-73"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 34.98577880859375,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "Apply Version Tag:",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "right",
+                    "Top" : 285.9943084716797,
+                    "Visible" : true,
+                    "DisplayName" : "Label-74",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-74",
+                    "Width" : 130
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 174.99993896484375,
+                    "CancelConfirmationButton" : "button2",
+                    "ShowDataLoading" : true,
+                    "Label" : "Apply Above Version to all Entities",
+                    "FocusStyle" : "Github.ButtonHoverStyle2",
+                    "TabSequence" : 0,
+                    "ToolTipField" : "",
+                    "IconAlignment" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Button-75",
+                    "Style" : "Github.ButtonStyle2",
+                    "Height" : 30,
+                    "DisabledStyle" : "DefaultButtonDisabledStyle",
+                    "Disabled" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "Width" : 340,
+                    "ResponsiveLayout" : false,
+                    "ConfirmationPrompt" : "Do Action?",
+                    "Z-index" : 10,
+                    "ConfirmationButton1Label" : "Yes",
+                    "RoundedCorners" : true,
+                    "__TypeDisplayName" : "Button",
+                    "HoverStyle" : "Github.ButtonHoverStyle2",
+                    "Type" : "button",
+                    "Area" : "UI",
+                    "Top" : 314.99998474121094,
+                    "DefaultConfirmationButton" : "button1",
+                    "ContextId" : "",
+                    "ConfirmationRequired" : false,
+                    "Id" : "Button-75",
+                    "ConfirmationButton2Label" : "No",
+                    "ActiveStyle" : "Github.ButtonHoverStyle2"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 175.01416015625,
+                    "CancelConfirmationButton" : "button2",
+                    "ShowDataLoading" : true,
+                    "Label" : "Perform Full Export",
+                    "FocusStyle" : "Github.ButtonHoverStyle2",
+                    "TabSequence" : 0,
+                    "ToolTipField" : "",
+                    "IconAlignment" : "left",
+                    "Visible" : true,
+                    "DisplayName" : "Button-76",
+                    "Style" : "Github.ButtonStyle2",
+                    "Height" : 30,
+                    "DisabledStyle" : "DefaultButtonDisabledStyle",
+                    "Disabled" : false,
+                    "ConfirmationTitle" : "Confirm Action",
+                    "Width" : 340,
+                    "ResponsiveLayout" : false,
+                    "ConfirmationPrompt" : "Do Action?",
+                    "Z-index" : 10,
+                    "ConfirmationButton1Label" : "Yes",
+                    "RoundedCorners" : true,
+                    "__TypeDisplayName" : "Button",
+                    "HoverStyle" : "Github.ButtonHoverStyle2",
+                    "Type" : "button",
+                    "Area" : "UI",
+                    "Top" : 359.9857940673828,
+                    "DefaultConfirmationButton" : "button1",
+                    "ContextId" : "",
+                    "ConfirmationRequired" : false,
+                    "Id" : "Button-76",
+                    "ConfirmationButton2Label" : "No",
+                    "ActiveStyle" : "Github.ButtonHoverStyle2"
+                  }
+                }, {
+                  "Widgets" : [ ],
+                  "Properties" : {
+                    "Left" : 210,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Text" : "If no tag is supplied, all entities will be exported.",
+                    "__TypeDisplayName" : "Label",
+                    "ToolTipField" : "",
+                    "Type" : "label",
+                    "Area" : "UI",
+                    "Alignment" : "left",
+                    "Top" : 158,
+                    "Visible" : true,
+                    "DisplayName" : "Label-79",
+                    "Style" : "Github.Label",
+                    "Height" : 22,
+                    "Id" : "Label-79",
+                    "Width" : 305
+                  }
+                } ],
+                "Properties" : {
+                  "Left" : 395,
+                  "HideScrollbars" : false,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "VerticalAnchor" : "top",
+                  "__TypeDisplayName" : "Panel",
+                  "HorizontalAnchor" : "center",
+                  "Type" : "panel",
+                  "Area" : "UI",
+                  "Top" : 20,
+                  "Visible" : true,
+                  "DisplayName" : "Panel-56",
+                  "Style" : "Github.PanelStyle",
+                  "Height" : 417,
+                  "Id" : "Panel-56",
+                  "Width" : 667
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 245,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "FocusStyle" : "DefaultFocusStyle",
+                  "TabSequence" : 0,
+                  "__TypeDisplayName" : "Checkbox",
+                  "ToolTipField" : "",
+                  "Type" : "checkbox",
+                  "Area" : "UI",
+                  "Top" : 275,
+                  "State" : false,
+                  "Visible" : false,
+                  "DisplayName" : "Checkbox-64",
+                  "Style" : "DefaultCheckboxStyle",
+                  "Prompt" : "Access Token has changed",
+                  "Height" : 20,
+                  "Id" : "Checkbox-64",
+                  "Disabled" : false,
+                  "Width" : 195
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "DataChangeType" : "ALWAYS",
+                  "Left" : 55,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Expression",
+                  "Type" : "expression",
+                  "Area" : "UI",
+                  "Top" : 275,
+                  "FireOnFirstValue" : false,
+                  "Expression" : "if(input == \"********\") { Output = false; } else { Output = true;};",
+                  "Output" : true,
+                  "Visible" : true,
+                  "DisplayName" : "Expression-67",
+                  "Height" : 28,
+                  "AutoEvaluate" : false,
+                  "Id" : "Expression-67",
+                  "_currentParameterDefs" : [ {
+                    "Description" : "",
+                    "BaseType" : "STRING",
+                    "ParameterName" : "input"
+                  } ],
+                  "OutputBaseType" : "BOOLEAN",
+                  "Width" : 200
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 515,
+                  "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                  "ShowDataLoading" : true,
+                  "Label" : "",
+                  "TabSequence" : 0,
+                  "PlaceholderText" : "",
+                  "ToolTipField" : "",
+                  "TextAlign" : "left",
+                  "Visible" : false,
+                  "DisplayName" : "Textbox-70",
+                  "Style" : "DefaultTextBoxStyle",
+                  "Height" : 24,
+                  "Width" : 300,
+                  "ReadOnly" : false,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "Z-index" : 10,
+                  "LabelAlignment" : "left",
+                  "Text" : "",
+                  "__TypeDisplayName" : "Textbox",
+                  "Type" : "textbox",
+                  "Area" : "UI",
+                  "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                  "MaskInputCharacters" : false,
+                  "Top" : 260,
+                  "CursorPosition" : 0,
+                  "Id" : "Textbox-70"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 115,
+                "HideScrollbars" : false,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "HorizontalAnchor" : "left",
+                "Type" : "panel",
+                "Area" : "UI",
+                "Top" : 135,
+                "Visible" : true,
+                "DisplayName" : "Panel-16",
+                "Style" : "Github.PanelStyle",
+                "Height" : 200,
+                "Id" : "Panel-16",
+                "Width" : 300
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Row 2",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-14"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 145,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 50,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 75,
+            "PctRow1" : 25,
+            "FooterHeight" : 0,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "Visible" : true,
+            "PctColumn5" : 1,
+            "RightSidebar" : false,
+            "DisplayName" : "Layout-11",
+            "LeftSidebar" : false,
+            "PctColumn6" : 1,
+            "PrintWidth" : 650,
+            "PctColumn3" : 1,
+            "PctColumn4" : 1,
+            "PctColumn1" : 50,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 2,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "ResponsiveLayout" : true,
+            "PctColumn8" : 1,
+            "Columns" : 0,
+            "Z-index" : 10,
+            "Spacing" : 0,
+            "Orientation" : "vertical",
+            "__TypeDisplayName" : "Layout",
+            "Type" : "layout",
+            "Area" : "UI",
+            "LeftSidebarWidth" : 0,
+            "Header" : true,
+            "Top" : 75,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "Layout-11"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "Visible" : true,
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "DisplayName" : "Column 1",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "TabOffset" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Type" : "container",
+          "Area" : "UI",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-3"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 70,
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 0,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 50,
+        "PctRow1" : 50,
+        "FooterHeight" : 0,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "Visible" : true,
+        "PctColumn5" : 1,
+        "RightSidebar" : false,
+        "DisplayName" : "Layout-1",
+        "LeftSidebar" : true,
+        "PctColumn6" : 1,
+        "PrintWidth" : 650,
+        "PctColumn3" : 1,
+        "PctColumn4" : 1,
+        "PctColumn1" : 100,
+        "PctColumn2" : 50,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 0,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "ResponsiveLayout" : true,
+        "PctColumn8" : 1,
+        "Columns" : 1,
+        "Z-index" : 10,
+        "Spacing" : 2,
+        "Orientation" : "horizontal",
+        "__TypeDisplayName" : "Layout",
+        "Type" : "layout",
+        "Area" : "UI",
+        "LeftSidebarWidth" : 440,
+        "Header" : false,
+        "Top" : 75,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "Layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 79,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "Rows" : 0,
+      "TitleBar" : false,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Columns" : 0,
+      "Z-index" : 10,
+      "Title" : "",
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Master" : "Github",
+      "Type" : "mashup",
+      "Area" : "Mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "Id" : "mashup-root",
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "mashupType" : "mashup",
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "GetConnectionAndFileRepoData",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_Github_Services",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "3955d512-08f6-4607-ac9d-702e47d2b1eb",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetConnectionAndFileRepoData",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_Github_Services",
+    "EventTriggerEvent" : "PopupClosed",
+    "Id" : "9bf00dd3-db8d-40ba-8ca5-a63e7b6e1dd4",
+    "EventTriggerId" : "Navigation-62",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "Evaluate",
+    "EventTriggerSection" : "Things_Github_Services",
+    "EventHandlerId" : "Expression-66",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "5afaa346-d58b-42d7-a39b-c3ede3520be0",
+    "EventTriggerId" : "GetConnectionAndFileRepoData",
+    "EventHandlerArea" : "UI"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "Evaluate",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Expression-67",
+    "EventTriggerEvent" : "Changed",
+    "Id" : "e4c363cd-c359-4a08-b81d-adfc49fca38b",
+    "EventTriggerId" : "Textbox-20",
+    "EventHandlerArea" : "UI"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "Evaluate",
+    "EventTriggerSection" : "Things_Github_Services",
+    "EventHandlerId" : "Expression-67",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "07d1ce99-927b-42ab-8d09-0ea46d7c80ae",
+    "EventTriggerId" : "GetConnectionAndFileRepoData",
+    "EventHandlerArea" : "UI"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetGithubRepos",
+    "EventTriggerSection" : "Things_Github_Services",
+    "EventHandlerId" : "DynamicThingTemplates_Github_Connection",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "c7843556-ebba-497c-8cf1-a822839a5a8a",
+    "EventTriggerId" : "GetConnectionAndFileRepoData",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetGithubRepos",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_Github_Connection",
+    "EventTriggerEvent" : "PopupClosed",
+    "Id" : "57b0212c-f260-4afa-9c4a-122c9620b45d",
+    "EventTriggerId" : "Navigation-68",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "UpdateGithubConfiguration",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_Github_Services",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "2cd62061-d3e4-41da-b0f5-1d6b69041cc2",
+    "EventTriggerId" : "Button-31",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetConnectionAndFileRepoData",
+    "EventTriggerSection" : "Things_Github_Services",
+    "EventHandlerId" : "Things_Github_Services",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "b77acba7-dd59-432d-ae7d-a840d94442da",
+    "EventTriggerId" : "UpdateGithubConfiguration",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "ApplyVersionTag",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_Github_FileRepository",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "96e5bd3b-4dc3-4633-8a2d-54b7a6c9965c",
+    "EventTriggerId" : "Button-75",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "ExportFullSourceCode",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_Github_FileRepository",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "0761fa34-afaa-433c-8f71-6ada7ab30520",
+    "EventTriggerId" : "Button-76",
+    "EventHandlerArea" : "Data"
+  } ],
+  "DataBindings" : [ {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "1e709a8c-0686-47c6-85b2-05070613e3a5",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "Grid-15"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "00188ad6-3e99-45b1-ab22-a5150e05a3df",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "GithubReportedMessage"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Textbox-25"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "b1e293e7-acbf-450d-840e-5012290058be",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "GithubReportedUserID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Textbox-27"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "ab5027c6-d7a5-4e54-8a33-2502678bf321",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Tags",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "TAGS",
+      "TargetPropertyBaseType" : "TAGS",
+      "SourceProperty" : "TagsToExport"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "TagPicker-30"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "e00a62ea-0e33-4af7-9a49-bf696f6bc0a4",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "GithubUserID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Textbox-19"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "Expression-66",
+    "SourceSection" : "",
+    "Id" : "f7070336-4c7c-42d7-8282-96cce1ab84af",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Output"
+    } ],
+    "TargetId" : "Textbox-20"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "Textbox-20",
+    "SourceSection" : "",
+    "Id" : "ead57eb2-05c6-48aa-852b-0af1d752d702",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "input",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "Expression-67"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "Expression-67",
+    "SourceSection" : "",
+    "Id" : "7b90a3a3-2fc0-4f36-89ad-6b14a7d0ec46",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "State",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "SourceProperty" : "Output"
+    } ],
+    "TargetId" : "Checkbox-64"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "76cbb9c3-cbda-4203-8de2-4c54ba2a9f05",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "githubConnection",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "GithubConnectionName"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Navigation-68"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_Github_Connection",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "866a4d4b-c860-408c-8987-0c4d58a77fd3",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "value",
+      "TargetPropertyType" : "Entity",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "GithubConnectionName"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "EntityName"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetGithubRepos",
+    "SourceSection" : "DynamicThingTemplates_Github_Connection",
+    "Id" : "91ae7a65-44e4-464d-8a16-6941bc793151",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "List-69"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "89d3a5c3-6c45-423b-86e5-72aa0556414a",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Data",
+      "TargetProperty" : "SelectedText",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "GithubRepo"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "List-69"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "Textbox-19",
+    "SourceSection" : "",
+    "Id" : "76e3b1e0-45ca-4ee5-b89e-a18d859c6e7f",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "userID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "Textbox-20",
+    "SourceSection" : "",
+    "Id" : "747f0ad1-1fd1-4169-8be2-341f3e83a933",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "accessToken",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "GetGithubRepos",
+    "SourceSection" : "DynamicThingTemplates_Github_Connection",
+    "Id" : "7f6ed9fc-d42e-4cb3-9231-1aef80f1a147",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "githubRepo",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "name"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "SourceSection" : "Things_Github_Services",
+    "Id" : "94d5861b-5906-4cf6-9b16-e82f8f3c5be3",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "fileRepo",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "GithubFileRepoName"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "Textbox-25",
+    "SourceSection" : "",
+    "Id" : "21a0f0b2-1bd7-47b6-86b7-080d1910a7f3",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "defaultReportedMessage",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "Textbox-27",
+    "SourceSection" : "",
+    "Id" : "034a7a8b-a4fe-472c-8dfa-6d7b121fb8d1",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "reportedUserID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "Checkbox-64",
+    "SourceSection" : "",
+    "Id" : "2c905a6a-e6d4-4d8e-b12f-a60ccb544703",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "accessTokenChanged",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "SourceProperty" : "State"
+    } ],
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "TagPicker-30",
+    "SourceSection" : "",
+    "Id" : "12a7c0a1-b085-4fa0-a668-ff04ffe8f77a",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "TAGS",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Tags"
+    } ],
+    "TargetId" : "Textbox-70"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_Github_Services",
+    "SourceId" : "Textbox-70",
+    "Id" : "f5a8eb19-6884-4990-892b-a792c4c30695",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "tags",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "UpdateGithubConfiguration"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_Github_FileRepository",
+    "SourceId" : "GetConnectionAndFileRepoData",
+    "Id" : "5856fc7f-faf6-493b-a688-13353a1f8c78",
+    "SourceSection" : "Things_Github_Services",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "value",
+      "TargetPropertyType" : "Entity",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "GithubFileRepoName"
+    } ],
+    "TargetId" : "EntityName"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_Github_FileRepository",
+    "SourceId" : "TagPicker-30",
+    "Id" : "b381e8af-2907-45c3-8123-8d24a7c4c05e",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "tags",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "TAGS",
+      "TargetPropertyBaseType" : "TAGS",
+      "SourceProperty" : "Tags"
+    } ],
+    "TargetId" : "ExportFullSourceCode"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_Github_FileRepository",
+    "SourceId" : "TagPicker-30",
+    "Id" : "e7041855-9958-472c-8f72-292ab9c67f0d",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "tags",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "TAGS",
+      "TargetPropertyBaseType" : "TAGS",
+      "SourceProperty" : "Tags"
+    } ],
+    "TargetId" : "ApplyVersionTag"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_Github_FileRepository",
+    "SourceId" : "Textbox-73",
+    "Id" : "faac192e-7c1c-49d3-9941-8c552b3b42d4",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "versionNumber",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "ApplyVersionTag"
+  } ],
+  "Data" : {
+    "Things_Github_Services" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "GetConnectionAndFileRepoData",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "7730ad69-1f49-401f-ac62-f50a580cf68e",
+        "Name" : "GetConnectionAndFileRepoData"
+      }, {
+        "Target" : "UpdateGithubConfiguration",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "51f8fdf0-923b-424f-8663-b8734b74baa9",
+        "Properties" : {
+          "CustomSuccessMessage" : "The configuration has been successfully updated. ",
+          "ShowSuccessMessage" : true,
+          "ShowErrorMessage" : true
+        },
+        "Name" : "UpdateGithubConfiguration"
+      } ],
+      "EntityName" : "Github.Services",
+      "Id" : "45c70e1d-84d7-4cd4-ad1f-9f01c40c325a",
+      "DataName" : "Things_Github_Services"
+    },
+    "DynamicThingTemplates_Github_Connection" : {
+      "EntityType" : "DynamicThingTemplates",
+      "Services" : [ {
+        "Target" : "GetGithubRepos",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "ef2c86c9-5744-4abd-8d9b-82d19ae638c0",
+        "Name" : "GetGithubRepos"
+      } ],
+      "EntityName" : "Github.Connection",
+      "Id" : "8bcd3ea7-7415-4045-b842-48521d3420d6",
+      "DataName" : "DynamicThingTemplates_Github_Connection"
+    },
+    "DynamicThingTemplates_Github_FileRepository" : {
+      "EntityType" : "DynamicThingTemplates",
+      "Services" : [ {
+        "Target" : "ApplyVersionTag",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "d2d068b9-3de3-4921-80f7-938309715a9b",
+        "Properties" : {
+          "ShowSuccessMessage" : true,
+          "ShowErrorMessage" : true
+        },
+        "Name" : "ApplyVersionTag"
+      }, {
+        "Target" : "ExportFullSourceCode",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "787fb0cd-f0f5-4db9-b156-60ced82bd4e1",
+        "Properties" : {
+          "ShowSuccessMessage" : true,
+          "ShowErrorMessage" : true
+        },
+        "Name" : "ExportFullSourceCode"
+      } ],
+      "EntityName" : "Github.FileRepository",
+      "Id" : "bae3a901-37d1-45bf-824e-ec5ccd3f7518",
+      "DataName" : "DynamicThingTemplates_Github_FileRepository"
+    },
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-06-28T11:19:59.062+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-31T11:06:10.508+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-03T22:46:19.226+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T22:48:33.150+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T22:49:37.710+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-04T03:07:49.047+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-11T19:10:23.918+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-09-11T19:14:14.928+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:14:15.791+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:14:31.368+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:14:32.119+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:15:18.400+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-09-11T19:17:17.357+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:18:29.955+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T19:18:32.749+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T21:22:17.896+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T21:23:57.885+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T21:23:58.570+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T21:37:43.411+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T22:01:51.264+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T22:05:08.862+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T23:28:30.992+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T23:28:32.718+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T23:32:40.347+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T23:34:06.708+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T23:34:13.175+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-12T02:13:16.861+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-12T02:13:37.254+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-12T02:14:20.499+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T18:32:46.411+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:00:38.545+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:01:28.039+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:04:38.639+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:08:08.711+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:08:15.609+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:08:29.943+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:11:51.451+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:13:17.239+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T19:16:16.187+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T22:45:13.025+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T22:45:43.638+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T22:48:59.707+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T23:03:01.428+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T23:03:27.726+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T23:04:49.288+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T23:07:00.105+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T23:07:45.555+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-09-18T20:58:30.362+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-18T21:16:11.865+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-18T21:20:20.075+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-18T21:21:00.361+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-18T21:21:30.734+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T23:53:06.471+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-20T23:53:55.379+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T00:21:51.669+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T00:44:20.302+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-21T16:49:34.848+05:30" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T01:14:32.289+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T02:26:24.314+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:28:04.918+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:28:08.776+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:36:02.690+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:38:37.490+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:49:14.237+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:52:39.654+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:56:40.943+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T02:57:22.573+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T03:00:50.670+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T19:58:07.414+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T19:58:57.120+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T23:57:06.405+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-18T00:09:31.468+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2018-03-08T12:39:49.760+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2018-03-08T12:40:40.308+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-03-08T13:22:32.790+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-03-08T17:44:23.719+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-03-08T17:46:07.249+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-03-08T17:50:09.266+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-03-08T17:53:47.554+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-03-08T18:05:37.617+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
