@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-03-08T18:05:20.906+05:30" name="Github.ConfigurationDS" projectName="" tags="Applications:github">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.isBuiltIn="true" aspect.isPersistent="false" aspect.isReadOnly="true" baseType="STRING" description="Thing description" name="description" ordinal="0"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="PASSWORD" description="" name="GithubAccessToken" ordinal="5"/>
+                <FieldDefinition baseType="STRING" description="" name="GithubConnectionName" ordinal="8"/>
+                <FieldDefinition baseType="STRING" description="" name="GithubFileRepoName" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" description="" name="GithubRepo" ordinal="1"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="System Update" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" description="" name="GithubReportedMessage" ordinal="4"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="ThingWorx System" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" description="" name="GithubReportedUserID" ordinal="3"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" description="" name="GithubUserID" ordinal="2"/>
+                <FieldDefinition aspect.tagType="ModelTags" baseType="TAGS" description="" name="TagsToExport" ordinal="7"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;fields : tags : removed, thingTemplate : removed, name : removed, TagsToExport : Added, GithubConnectionName : Added, GithubFileRepoName : Added&#10;" timestamp="2015-09-11T22:08:27.564+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : GithubAccessToken : Updated&#10;" timestamp="2015-09-12T02:09:07.210+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : GithubAccessToken : Updated&#10;" timestamp="2015-09-12T02:10:29.786+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T23:53:05.843+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T00:44:19.668+05:30" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T02:26:24.167+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2018-03-08T12:39:49.338+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2018-03-08T18:05:20.906+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
