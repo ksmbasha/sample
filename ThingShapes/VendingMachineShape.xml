@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingShapes>
+        <ThingShape className="" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-04-17T18:06:13.391+05:30" name="VendingMachineShape" projectName="" tags="Applications:ThingWorx Training">
+            <PropertyDefinitions>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" aspect.units="%" baseType="NUMBER" category="" description="Vending Machine Current Humidity" isLocalOnly="false" name="CurrentHumidity" ordinal="1"/>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="25.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" aspect.units="F" baseType="NUMBER" category="" description="Vending Machine Temperature" isLocalOnly="false" name="CurrentTemperature" ordinal="3"/>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="Mubarak" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="USERNAME" category="" description="Vending Machine Field Service Technician" isLocalOnly="false" name="FieldServiceTech" ordinal="5"/>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="LOCATION" category="" description="Vending Machine Location" isLocalOnly="false" name="Location" ordinal="6"/>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" aspect.units="%" baseType="NUMBER" category="" description="Vending Machine Humidity Setpoint" isLocalOnly="false" name="VMHumiditySetpoint" ordinal="2"/>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" aspect.units="F" baseType="NUMBER" category="" description="Vending Machine Temperature Setpoint" isLocalOnly="false" name="VMTemperatureSetpoint" ordinal="4"/>
+            </PropertyDefinitions>
+            <ServiceDefinitions/>
+            <EventDefinitions>
+                <EventDefinition category="" dataShape="VMDS" description="" name="myown"/>
+            </EventDefinitions>
+            <ServiceMappings/>
+            <ServiceImplementations/>
+            <Subscriptions>
+                <Subscription enabled="true" eventName="Alert" source="" sourceProperty="CurrentHumidity">
+                    <ServiceImplementation description="" handlerName="Script" name="CurrentHumidity.Alert">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	subject: "Humidity Alert" /* STRING */,
+	from: "ksmbasha@gmail.com" /* STRING */,
+	to: "ksmbasha@axelta.com" /* STRING */,
+	body: "Humidity is very high than the prescribed range" /* HTML */
+};
+
+// no return
+Things["ACMEVendingNotifier"].SendMessage(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+                <Subscription enabled="true" eventName="Alert" source="" sourceProperty="CurrentTemperature">
+                    <ServiceImplementation description="" handlerName="Script" name="CurrentTemperature.Alert">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	subject: "HIghHigh Alert Triggered" /* STRING */,
+	from: "ksmbasha@gmail.com" /* STRING */,
+	to: Users[me.FieldServiceTech].emailAddress /* STRING */,
+    body: "The temperature is too high is - "+me.CurrentTemperature /* HTML */
+};
+
+
+// no return
+Things["ACMEVendingNotifier"].SendMessage(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;properties : CurrentHumidity : Added, VMHumiditySetpoint : Added, CurrentTemperature : Added, VMTemperatureSetpoint : Added, FieldServiceTech : Added, Location : Added&#10;" timestamp="2017-02-07T22:38:46.375+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;" timestamp="2017-03-19T16:36:23.671+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-19T16:52:48.817+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, CurrentTemperature.Alert : New subscription, Subscription Added&#10;" timestamp="2017-03-19T17:09:23.768+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentHumidity : Updated&#10;" timestamp="2017-03-21T18:37:13.110+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, CurrentTemperature.Alert : Code Updated&#10;" timestamp="2017-04-04T22:48:30.270+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T22:52:01.465+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T22:53:17.144+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T22:54:31.047+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T22:56:29.583+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T22:59:36.782+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T23:13:06.234+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T23:19:08.912+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T23:22:40.664+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T23:31:32.647+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-04T23:33:28.774+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : CurrentTemperature.Alert : Code Updated&#10;" timestamp="2017-04-05T09:47:36.229+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T09:51:49.084+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T09:57:06.368+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T09:59:32.762+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T10:18:08.408+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : CurrentTemperature.Alert : Code Updated&#10;" timestamp="2017-04-05T10:43:29.086+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T10:43:34.816+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T10:44:35.653+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-05T10:46:34.698+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentHumidity : Updated, CurrentTemperature : Updated&#10;" timestamp="2017-04-26T15:20:24.011+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:20:31.124+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;" timestamp="2017-06-02T14:21:17.713+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;subscriptions : CurrentTemperature.Alert : Code Updated&#10;" timestamp="2017-06-02T14:24:54.706+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-02T14:29:09.014+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-02T14:32:24.099+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentHumidity : Updated&#10;subscriptions : New subscription : Code Updated, CurrentHumidity.Alert : New subscription, Subscription Added&#10;" timestamp="2017-06-03T09:56:06.359+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : FieldServiceTech : Updated&#10;subscriptions : CurrentTemperature.Alert : Code Updated&#10;" timestamp="2017-06-06T22:42:55.999+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-06T22:50:11.564+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;" timestamp="2017-06-08T08:05:30.162+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentHumidity : Updated, CurrentTemperature : Updated&#10;" timestamp="2017-06-08T08:07:47.649+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;" timestamp="2017-06-08T08:12:37.336+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentHumidity : Updated, CurrentTemperature : Updated&#10;" timestamp="2017-06-08T08:17:21.401+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;" timestamp="2017-06-08T08:21:56.269+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="events : temperture : EventType updated&#10;subscriptions : New subscription : Source updated, Code Updated&#10;" timestamp="2017-06-08T17:42:22.113+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated&#10;" timestamp="2017-06-08T17:50:34.314+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="events : temperture : removed&#10;" timestamp="2017-06-08T22:25:58.433+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-08T22:27:23.526+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-09T10:30:36.856+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-03T12:11:54.010+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-07T16:43:24.753+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-11T11:12:57.900+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-20T08:24:12.461+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : documentationContent : updated&#10;" timestamp="2017-09-20T20:40:05.648+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-08T06:17:28.106+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentTemperature : Updated&#10;" timestamp="2017-11-14T10:15:29.309+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-14T10:18:41.516+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-04-17T18:06:13.362+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="CurrentHumidity">
+                    <AlertDefinition alertType="Above" description="humidity is very high" enabled="true" name="HighHumidity" priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition aspect.friendlyName="Limit" baseType="NUMBER" description="Limit to compare" name="limit" ordinal="0"/>
+                                    <FieldDefinition aspect.defaultValue="true" aspect.friendlyName="Include Limit?" baseType="BOOLEAN" description="Limit includes value" name="limitInclusive" ordinal="1"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limitInclusive>true</limitInclusive>
+                                    <limit>25.0</limit>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions name="CurrentTemperature"/>
+                <AlertDefinitions name="FieldServiceTech"/>
+                <AlertDefinitions name="Location"/>
+                <AlertDefinitions name="VMHumiditySetpoint"/>
+                <AlertDefinitions name="VMTemperatureSetpoint"/>
+            </AlertConfigurations>
+            <InstanceRunTimePermissions/>
+        </ThingShape>
+    </ThingShapes>
+</Entities>
