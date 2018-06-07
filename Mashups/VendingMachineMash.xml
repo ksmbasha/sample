@@ -1,0 +1,2613 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-06-07T14:41:25.969+05:30" name="VendingMachineMash" projectName="" rows="0.0" tags="Applications:ThingWorx Training">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>ACMESQLDatabase1</Thing>
+                <Thing>VM-TR1</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates>
+                <ThingTemplate>VendingMachineTemplate</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "Left" : 0,
+                "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                "ShowDataLoading" : true,
+                "Label" : "",
+                "Alignment" : "left",
+                "DropdownStyle" : "DefaultDropdownStyle",
+                "DisplayField" : "name",
+                "Visible" : true,
+                "DisplayName" : "dhxlist-20",
+                "Height" : 200,
+                "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                "Width" : 110,
+                "DropdownButtonStyle" : "DefaultDropdownButtonStyle",
+                "ClearIfNoSelection" : false,
+                "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                "ListLabelStyle" : "DefaultWidgetLabelStyle",
+                "MultiSelect" : false,
+                "__supportsLabel" : true,
+                "ResponsiveLayout" : true,
+                "LabelAlignment" : "left",
+                "Z-index" : 10,
+                "HeightOfDropdownView" : 200,
+                "View" : "list",
+                "__TypeDisplayName" : "List",
+                "RowHeight" : 28,
+                "ListItemStyle" : "DefaultListItemStyle",
+                "NumberOfItemsInDropdownView" : 6,
+                "Area" : "UI",
+                "Type" : "dhxlist",
+                "Top" : 0,
+                "DropdownSelectedStyle" : "DefaultDropdownSelectedStyle",
+                "Id" : "dhxlist-20",
+                "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                "AutoSelectFirstRow" : true
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "Visible" : true,
+              "DisplayName" : "Row 1",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "TabOffset" : 0,
+              "MinWidth" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Area" : "UI",
+              "Type" : "container",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-6"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Minimum" : 0,
+                  "Left" : 150,
+                  "ValueAlign" : "right",
+                  "ShowDataLoading" : true,
+                  "Label" : "",
+                  "TabSequence" : 0,
+                  "ToolTipField" : "",
+                  "Maximum" : 100,
+                  "ConstrainValue" : false,
+                  "Visible" : true,
+                  "DisplayName" : "numericentry-28",
+                  "FixedDigits" : 0,
+                  "Style" : "DefaultTextBoxStyle",
+                  "Height" : 24,
+                  "Width" : 200,
+                  "AllowDecimals" : true,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "LabelAlignment" : "left",
+                  "Z-index" : 10,
+                  "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                  "__TypeDisplayName" : "Numeric Entry",
+                  "Area" : "UI",
+                  "Type" : "numericentry",
+                  "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                  "Top" : 85,
+                  "AllowNegatives" : true,
+                  "Value" : 0,
+                  "Id" : "numericentry-28"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "AutoRefreshTabSequence" : 0,
+                  "Left" : 5,
+                  "ShowDataLoading" : true,
+                  "Label" : "Refresh Now",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "ShowControls" : true,
+                  "RefreshToggleStyleOff" : "DefaultAutoRefreshToggleOffStyle",
+                  "IconAlignment" : "left",
+                  "RefreshInterval" : 30,
+                  "Visible" : true,
+                  "DisplayName" : "autorefresh-32",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 28,
+                  "Width" : 180,
+                  "RefreshToggleStyle" : "DefaultAutoRefreshToggleStyle",
+                  "ResponsiveLayout" : false,
+                  "RefreshNowTabSequence" : 0,
+                  "RefreshToggleSliderStyle" : "DefaultAutoRefreshToggleSliderStyle",
+                  "Z-index" : 10,
+                  "RefreshToggleLabelOff" : "Off",
+                  "__TypeDisplayName" : "Auto Refresh",
+                  "RefreshToggleLabel" : "On",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Area" : "UI",
+                  "Type" : "autorefresh",
+                  "Top" : 10,
+                  "Id" : "autorefresh-32",
+                  "ActiveStyle" : "DefaultButtonActiveStyle",
+                  "AutoRefresh" : true
+                }
+              } ],
+              "Properties" : {
+                "Left" : 150,
+                "HideScrollbars" : false,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "HorizontalAnchor" : "left",
+                "Area" : "UI",
+                "Type" : "panel",
+                "Top" : 85,
+                "Visible" : true,
+                "DisplayName" : "panel-27",
+                "Style" : "DefaultPanelStyle",
+                "Height" : 200,
+                "Id" : "panel-27",
+                "Width" : 300
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "Visible" : true,
+              "DisplayName" : "Row 2",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "TabOffset" : 0,
+              "MinWidth" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Area" : "UI",
+              "Type" : "container",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-7"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 15,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 0,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 50,
+            "FooterHeight" : 0,
+            "PctRow1" : 50,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "LeftSidebar" : false,
+            "RightSidebar" : false,
+            "PctColumn5" : 1,
+            "Visible" : true,
+            "DisplayName" : "layout-5",
+            "PctColumn6" : 1,
+            "PctColumn3" : 1,
+            "PrintWidth" : 650,
+            "PctColumn4" : 1,
+            "PctColumn1" : 50,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 2,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "PctColumn8" : 1,
+            "ResponsiveLayout" : true,
+            "Columns" : 0,
+            "Z-index" : 10,
+            "Spacing" : 2,
+            "Orientation" : "vertical",
+            "__TypeDisplayName" : "Layout",
+            "Area" : "UI",
+            "Type" : "layout",
+            "LeftSidebarWidth" : 0,
+            "Header" : false,
+            "Top" : 10,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "layout-5"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Left Sidebar",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "Intervals" : 10,
+                "LabelDisplayMode" : "inside",
+                "Legend" : "",
+                "GaugeBorder" : 20,
+                "TickStyle" : "DefaultGaugeTickStyle",
+                "Left" : 15,
+                "ShowDataLoading" : true,
+                "Aperture" : 270,
+                "ValueDigits" : 3,
+                "LegendDisplayMode" : "bottom",
+                "ToolTipField" : "",
+                "ValueFormatter_StateParameters" : [ ],
+                "ValueStyle" : "DefaultGaugeValueStyle",
+                "CenterStyle" : "DefaultGaugeCenterStyle",
+                "MinorTickLength" : 4,
+                "FormatNeedle" : true,
+                "MinValue" : 0,
+                "Visible" : true,
+                "DisplayName" : "gauge-21",
+                "IntervalsPerLabel" : 2,
+                "Height" : 200,
+                "LabelDecimals" : 0,
+                "ValueDecimals" : 0,
+                "LegendStyle" : "DefaultGaugeLegendStyle",
+                "Width" : 200,
+                "GaugeStyle" : "DefaultGaugeStyle",
+                "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                "RingWidth" : 10,
+                "ResponsiveLayout" : true,
+                "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                "Z-index" : 10,
+                "LabelStyle" : "DefaultGaugeLabelStyle",
+                "MaxValue" : 100,
+                "__TypeDisplayName" : "Gauge",
+                "TickLength" : 8,
+                "Area" : "UI",
+                "Type" : "gauge",
+                "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+                "Top" : 5,
+                "ReferenceAngle" : 225,
+                "ValueDisplayMode" : "none",
+                "MinorTicks" : 4,
+                "CenterDiameter" : 20,
+                "Id" : "gauge-21",
+                "NeedleDiameter" : 10,
+                "LabelDigits" : 3
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "Visible" : true,
+              "DisplayName" : "Row 1",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "TabOffset" : 0,
+              "MinWidth" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Area" : "UI",
+              "Type" : "container",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-9"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 0,
+                  "__supportsLabel" : true,
+                  "Digits" : 5,
+                  "ShowDataLoading" : true,
+                  "ResponsiveLayout" : false,
+                  "Label" : "",
+                  "LabelAlignment" : "left",
+                  "Z-index" : 10,
+                  "Decimals" : 2,
+                  "ZeroFill" : false,
+                  "__TypeDisplayName" : "LED Display",
+                  "LEDSize" : "normal",
+                  "ToolTipField" : "",
+                  "Area" : "UI",
+                  "Type" : "leddisplay",
+                  "LEDFormatter_StateParameters" : [ ],
+                  "Top" : 0,
+                  "LEDLabelStyle" : "DefaultWidgetLabelStyle",
+                  "Visible" : true,
+                  "DisplayName" : "leddisplay-23",
+                  "Height" : 56,
+                  "Id" : "leddisplay-23",
+                  "Width" : 154,
+                  "LEDStyle" : "DefaultLEDStyle"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Minimum" : 0,
+                  "Left" : 0,
+                  "ValueAlign" : "right",
+                  "ShowDataLoading" : true,
+                  "Label" : "Set Temperature",
+                  "TabSequence" : 0,
+                  "ToolTipField" : "",
+                  "Maximum" : 100,
+                  "ConstrainValue" : false,
+                  "Visible" : true,
+                  "DisplayName" : "numericentry-26",
+                  "FixedDigits" : 0,
+                  "Style" : "DefaultTextBoxStyle",
+                  "Height" : 19,
+                  "Width" : 150,
+                  "AllowDecimals" : true,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "LabelAlignment" : "left",
+                  "Z-index" : 10,
+                  "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                  "__TypeDisplayName" : "Numeric Entry",
+                  "Area" : "UI",
+                  "Type" : "numericentry",
+                  "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                  "Top" : 57,
+                  "AllowNegatives" : true,
+                  "Value" : 0,
+                  "Id" : "numericentry-26"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Minimum" : 0,
+                  "Left" : 5,
+                  "ValueAlign" : "right",
+                  "ShowDataLoading" : true,
+                  "Label" : "Set Humidity",
+                  "TabSequence" : 0,
+                  "ToolTipField" : "",
+                  "Maximum" : 100,
+                  "ConstrainValue" : false,
+                  "Visible" : true,
+                  "DisplayName" : "numericentry-29",
+                  "FixedDigits" : 0,
+                  "Style" : "DefaultTextBoxStyle",
+                  "Height" : 14,
+                  "Width" : 150,
+                  "AllowDecimals" : true,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "LabelAlignment" : "left",
+                  "Z-index" : 10,
+                  "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                  "__TypeDisplayName" : "Numeric Entry",
+                  "Area" : "UI",
+                  "Type" : "numericentry",
+                  "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                  "Top" : 110,
+                  "AllowNegatives" : true,
+                  "Value" : 0,
+                  "Id" : "numericentry-29"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 20,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "SET",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "ToolTipField" : "",
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "button-31",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Disabled" : false,
+                  "Width" : 75,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Do Action?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Area" : "UI",
+                  "Type" : "button",
+                  "Top" : 180,
+                  "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
+                  "ConfirmationRequired" : false,
+                  "Id" : "button-31",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 45,
+                "HideScrollbars" : false,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "HorizontalAnchor" : "left",
+                "Area" : "UI",
+                "Type" : "panel",
+                "Top" : 25,
+                "Visible" : true,
+                "DisplayName" : "panel-22",
+                "Style" : "DefaultPanelStyle",
+                "Height" : 200,
+                "Id" : "panel-22",
+                "Width" : 300
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "Visible" : true,
+              "DisplayName" : "Row 2",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "TabOffset" : 0,
+              "MinWidth" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Area" : "UI",
+              "Type" : "container",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-10"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 15,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 0,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 50,
+            "FooterHeight" : 0,
+            "PctRow1" : 50,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "LeftSidebar" : false,
+            "RightSidebar" : false,
+            "PctColumn5" : 1,
+            "Visible" : true,
+            "DisplayName" : "layout-8",
+            "PctColumn6" : 1,
+            "PctColumn3" : 1,
+            "PrintWidth" : 650,
+            "PctColumn4" : 1,
+            "PctColumn1" : 50,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 2,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "PctColumn8" : 1,
+            "ResponsiveLayout" : true,
+            "Columns" : 0,
+            "Z-index" : 10,
+            "Spacing" : 2,
+            "Orientation" : "vertical",
+            "__TypeDisplayName" : "Layout",
+            "Area" : "UI",
+            "Type" : "layout",
+            "LeftSidebarWidth" : 0,
+            "Header" : false,
+            "Top" : 15,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "layout-8"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Column 1",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-3"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "MinHeight" : 0,
+                  "TabWidth" : 36,
+                  "BGImageRepeat" : "no-repeat",
+                  "ShowDataLoading" : true,
+                  "ShowExpandCollapseTab" : false,
+                  "ExpandCollapseTabLocation" : "outside",
+                  "TabExpandStyle" : "DefaultTabExpandStyle",
+                  "Visible" : true,
+                  "DisplayName" : "Column 1",
+                  "Style" : "DefaultContainerStyle",
+                  "BGImageSize" : "auto",
+                  "Overlay" : false,
+                  "Expanded" : true,
+                  "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                  "OverlayIsTransparent" : false,
+                  "ResponsiveLayout" : true,
+                  "Z-index" : 10,
+                  "TabOffset" : 0,
+                  "MinWidth" : 0,
+                  "__TypeDisplayName" : "Container",
+                  "TabLocation" : "center",
+                  "Area" : "UI",
+                  "Type" : "container",
+                  "AnimateExpandCollapse" : true,
+                  "TabHeight" : 36,
+                  "Id" : "container-18"
+                }
+              }, {
+                "Widgets" : [ {
+                  "Widgets" : [ {
+                    "Widgets" : [ {
+                      "Widgets" : [ ],
+                      "Properties" : {
+                        "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                        "IsEditable" : false,
+                        "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                        "Left" : 80,
+                        "ShowDataLoading" : true,
+                        "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                        "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                        "FocusStyle" : "DefaultFocusStyle",
+                        "TabSequence" : 0,
+                        "RowFormat_StateParameters" : [ ],
+                        "CellTextWrapping" : false,
+                        "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                        "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                        "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                        "Visible" : true,
+                        "DisplayName" : "dhxgrid-45",
+                        "Height" : 200,
+                        "Width" : 400,
+                        "MultiSelect" : false,
+                        "CurrentScrollTop" : 0,
+                        "ResponsiveLayout" : true,
+                        "ShowAllColumns" : false,
+                        "Z-index" : 10,
+                        "AlignHeader" : false,
+                        "__TypeDisplayName" : "Grid",
+                        "ScrollTop" : 0,
+                        "RowHeight" : 30,
+                        "ColumnFormat" : {
+                          "formatInfo" : [ {
+                            "ValidationMessage" : "",
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "Title" : "CurrentHumidity",
+                            "ValidationExpression" : "",
+                            "FormatOptions" : {
+                              "renderer" : "NUMBER",
+                              "FormatString" : "0.00"
+                            },
+                            "FieldName" : "CurrentHumidity",
+                            "Width" : "auto"
+                          }, {
+                            "ValidationMessage" : "",
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "Title" : "CurrentTemperature",
+                            "ValidationExpression" : "",
+                            "FormatOptions" : {
+                              "renderer" : "NUMBER",
+                              "FormatString" : "0.00"
+                            },
+                            "FieldName" : "CurrentTemperature",
+                            "Width" : "auto"
+                          }, {
+                            "ValidationMessage" : "",
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Title" : "timestamp",
+                            "ValidationExpression" : "",
+                            "FormatOptions" : {
+                              "renderer" : "DATETIME",
+                              "FormatString" : "[[dateTimeFormat_Default]]"
+                            },
+                            "FieldName" : "timestamp",
+                            "Width" : "auto"
+                          } ]
+                        },
+                        "Area" : "UI",
+                        "Type" : "dhxgrid",
+                        "Top" : 30,
+                        "IsPrintLayout" : false,
+                        "Id" : "dhxgrid-45",
+                        "RowHoverStyle" : "DefaultRowHoverStyle",
+                        "AutoSelectFirstRow" : false,
+                        "GridHeaderTextCase" : "capitalize"
+                      }
+                    } ],
+                    "Properties" : {
+                      "MinHeight" : 0,
+                      "TabWidth" : 36,
+                      "BGImageRepeat" : "no-repeat",
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ExpandCollapseTabLocation" : "outside",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "Visible" : true,
+                      "DisplayName" : "Tab #1",
+                      "Style" : "DefaultContainerStyle",
+                      "BGImageSize" : "auto",
+                      "Overlay" : false,
+                      "Expanded" : true,
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "Z-index" : 10,
+                      "TabOffset" : 0,
+                      "MinWidth" : 0,
+                      "__TypeDisplayName" : "Container",
+                      "TabLocation" : "center",
+                      "Area" : "UI",
+                      "Type" : "container",
+                      "AnimateExpandCollapse" : true,
+                      "TabHeight" : 36,
+                      "Id" : "container-43"
+                    }
+                  }, {
+                    "Widgets" : [ {
+                      "Widgets" : [ {
+                        "Widgets" : [ ],
+                        "Properties" : {
+                          "YAxisLabels" : 2,
+                          "SeriesDataStyle14_StateParameters" : [ ],
+                          "Left" : 0,
+                          "AxisMaximum16" : 100,
+                          "AxisMaximum17" : 100,
+                          "AxisMaximum18" : 100,
+                          "ChartStyle" : "DefaultChartStyle",
+                          "AxisMaximum19" : 100,
+                          "SelectedItemStyle" : "DefaultChartSelectionStyle",
+                          "AxisMaximum12" : 100,
+                          "AxisMaximum13" : 100,
+                          "AxisMaximum14" : 100,
+                          "AxisMaximum15" : 100,
+                          "AxisMaximum2" : 100,
+                          "AxisMaximum1" : 100,
+                          "AxisMaximum20" : 100,
+                          "SeriesDataStyle7_StateParameters" : [ ],
+                          "AxisMaximum21" : 100,
+                          "AxisMaximum22" : 100,
+                          "AxisMaximum6" : 100,
+                          "SeriesDataStyle4_StateParameters" : [ ],
+                          "SecondaryYAxisMaximum" : 100,
+                          "AxisMaximum5" : 100,
+                          "AxisMaximum4" : 100,
+                          "XAxisTitle" : "",
+                          "AxisMaximum3" : 100,
+                          "AxisMaximum9" : 100,
+                          "AxisMaximum8" : 100,
+                          "AxisMaximum7" : 100,
+                          "SeriesDataStyle11_StateParameters" : [ ],
+                          "SeriesDataStyle17_StateParameters" : [ ],
+                          "ShowYAxisLabels" : true,
+                          "Z-index" : 10,
+                          "SeriesDataStyle1_StateParameters" : [ ],
+                          "AxisMaximum23" : 100,
+                          "YAxisMaximum" : 100,
+                          "AxisMaximum24" : 100,
+                          "MarkerSize" : 3,
+                          "SecondaryYAxisTitle" : "",
+                          "YAxisMinorTicks" : 1,
+                          "SecondaryYAxisZeroscale" : false,
+                          "AxisMinimum19" : 0,
+                          "AllowSelection" : true,
+                          "AxisMinimum18" : 0,
+                          "AxisMinimum17" : 0,
+                          "AxisMinimum16" : 0,
+                          "AxisMinimum15" : 0,
+                          "AxisMinimum14" : 0,
+                          "YAxisAutoscale" : true,
+                          "AxisMinimum13" : 0,
+                          "AxisMinimum12" : 0,
+                          "AxisMinimum11" : 0,
+                          "AxisMinimum10" : 0,
+                          "XAxisField" : "temp",
+                          "XAxisStyle" : "DefaultChartAxisStyle",
+                          "SecondaryYAxisAutoscale" : true,
+                          "XAxisFormat" : "0000.0",
+                          "SeriesDataStyle3_StateParameters" : [ ],
+                          "ChartIndicatorStyle" : "DefaultChartIndicatorStyle",
+                          "ShowXAxis" : true,
+                          "SeriesMarkerType24" : "chart",
+                          "ShowXAxisTicks" : true,
+                          "SeriesMarkerType23" : "chart",
+                          "SeriesMarkerType22" : "chart",
+                          "SeriesMarkerType21" : "chart",
+                          "SeriesMarkerType20" : "chart",
+                          "SeriesDataStyle9_StateParameters" : [ ],
+                          "SeriesDataStyle6_StateParameters" : [ ],
+                          "Area" : "UI",
+                          "LegendLocation" : "right",
+                          "SeriesDataStyle20_StateParameters" : [ ],
+                          "SeriesStyle11" : "DefaultChartStyle11",
+                          "SeriesStyle12" : "DefaultChartStyle12",
+                          "SeriesDataStyle23_StateParameters" : [ ],
+                          "SeriesStyle10" : "DefaultChartStyle10",
+                          "SeriesStyle15" : "DefaultChartStyle15",
+                          "SeriesStyle16" : "DefaultChartStyle16",
+                          "SeriesStyle13" : "DefaultChartStyle13",
+                          "SeriesStyle14" : "DefaultChartStyle14",
+                          "YAxisZeroscale" : false,
+                          "GridStyle" : "DefaultChartGridStyle",
+                          "AxisMaximum10" : 100,
+                          "AxisMaximum11" : 100,
+                          "YAxisFormat" : "0000.0",
+                          "ShowYAxisGrid" : true,
+                          "ChartOrientation" : "vertical",
+                          "XAxisLabelType" : "DATETIME",
+                          "DataField1" : "humi",
+                          "NumberOfSeries" : 8,
+                          "SeriesStyle3" : "DefaultChartStyle3",
+                          "SeriesStyle2" : "DefaultChartStyle2",
+                          "SeriesStyle5" : "DefaultChartStyle5",
+                          "SeriesStyle4" : "DefaultChartStyle4",
+                          "SeriesStyle7" : "DefaultChartStyle7",
+                          "SeriesStyle6" : "DefaultChartStyle6",
+                          "SeriesStyle9" : "DefaultChartStyle9",
+                          "SeriesStyle8" : "DefaultChartStyle8",
+                          "ShowDataLoading" : true,
+                          "AxisFormat19" : "0000.0",
+                          "ShowYAxis" : true,
+                          "YAxisIntervals" : 10,
+                          "SeriesStyle1" : "DefaultChartStyle1",
+                          "AxisFormat22" : "0000.0",
+                          "AxisFormat23" : "0000.0",
+                          "AxisFormat24" : "0000.0",
+                          "SecondaryYAxisFormat" : "0000.0",
+                          "AxisFormat20" : "0000.0",
+                          "AxisFormat21" : "0000.0",
+                          "SeriesStyle19" : "DefaultChartStyle19",
+                          "SeriesDataStyle22_StateParameters" : [ ],
+                          "SeriesStyle17" : "DefaultChartStyle17",
+                          "SeriesStyle18" : "DefaultChartStyle18",
+                          "YAxisTitle" : "",
+                          "__TypeDisplayName" : "Label Chart",
+                          "SeriesMarkerType1" : "chart",
+                          "YAxisMinimum" : 0,
+                          "SeriesMarkerType2" : "chart",
+                          "Top" : 5,
+                          "SeriesType9" : "chart",
+                          "SeriesType8" : "chart",
+                          "SeriesMarkerType9" : "chart",
+                          "SeriesStyle22" : "DefaultChartStyle22",
+                          "SeriesType7" : "chart",
+                          "SeriesStyle23" : "DefaultChartStyle23",
+                          "SeriesType6" : "chart",
+                          "SeriesMarkerType7" : "chart",
+                          "SeriesStyle20" : "DefaultChartStyle20",
+                          "SeriesType5" : "chart",
+                          "SeriesMarkerType8" : "chart",
+                          "SeriesStyle21" : "DefaultChartStyle21",
+                          "Id" : "labelchart-66",
+                          "SeriesType4" : "chart",
+                          "SeriesMarkerType5" : "chart",
+                          "SeriesType3" : "chart",
+                          "SeriesMarkerType6" : "chart",
+                          "ShowLegend" : true,
+                          "SeriesType2" : "chart",
+                          "SeriesMarkerType3" : "chart",
+                          "SeriesStyle24" : "DefaultChartStyle24",
+                          "SeriesType1" : "chart",
+                          "SeriesMarkerType4" : "chart",
+                          "SeriesType10" : "chart",
+                          "SeriesType11" : "chart",
+                          "SeriesType12" : "chart",
+                          "SeriesType13" : "chart",
+                          "SeriesType14" : "chart",
+                          "SeriesType15" : "chart",
+                          "SeriesType16" : "chart",
+                          "AxisZeroscale20" : false,
+                          "SeriesType17" : "chart",
+                          "SeriesType18" : "chart",
+                          "SeriesType19" : "chart",
+                          "AxisZeroscale19" : false,
+                          "AxisZeroscale18" : false,
+                          "LegendWidth" : 0,
+                          "AxisZeroscale11" : false,
+                          "Visible" : true,
+                          "AxisZeroscale10" : false,
+                          "AxisZeroscale13" : false,
+                          "AxisZeroscale12" : false,
+                          "AxisZeroscale15" : false,
+                          "Width" : 640,
+                          "AxisZeroscale14" : false,
+                          "AxisZeroscale17" : false,
+                          "AxisZeroscale16" : false,
+                          "SeriesType21" : "chart",
+                          "SeriesType22" : "chart",
+                          "SeriesType23" : "chart",
+                          "SeriesType24" : "chart",
+                          "SeriesMarkerType19" : "chart",
+                          "AxisZeroscale9" : false,
+                          "SeriesMarkerType18" : "chart",
+                          "SeriesDataStyle18_StateParameters" : [ ],
+                          "SeriesMarkerType17" : "chart",
+                          "SeriesMarkerType16" : "chart",
+                          "ResponsiveLayout" : false,
+                          "AxisZeroscale6" : false,
+                          "AxisZeroscale5" : false,
+                          "SeriesDataStyle15_StateParameters" : [ ],
+                          "AxisZeroscale8" : false,
+                          "AxisZeroscale7" : false,
+                          "AxisZeroscale2" : false,
+                          "AxisZeroscale1" : false,
+                          "AxisZeroscale4" : false,
+                          "AxisZeroscale3" : false,
+                          "AxisFormat11" : "0000.0",
+                          "AxisFormat12" : "0000.0",
+                          "Type" : "labelchart",
+                          "AxisFormat13" : "0000.0",
+                          "LegendOrientation" : "vertical",
+                          "AxisFormat14" : "0000.0",
+                          "AxisFormat15" : "0000.0",
+                          "AxisFormat16" : "0000.0",
+                          "AxisFormat17" : "0000.0",
+                          "SeriesDataStyle12_StateParameters" : [ ],
+                          "AxisFormat18" : "0000.0",
+                          "ChartAreaStyle" : "DefaultChartAreaStyle",
+                          "SeriesMarkerType15" : "chart",
+                          "AxisZeroscale22" : false,
+                          "SeriesDataStyle8_StateParameters" : [ ],
+                          "SeriesMarkerType14" : "chart",
+                          "AxisZeroscale21" : false,
+                          "SeriesMarkerType13" : "chart",
+                          "AxisZeroscale24" : false,
+                          "SeriesMarkerType12" : "chart",
+                          "AxisZeroscale23" : false,
+                          "SeriesMarkerType11" : "chart",
+                          "SeriesMarkerType10" : "chart",
+                          "SeriesDataStyle2_StateParameters" : [ ],
+                          "AxisFormat10" : "0000.0",
+                          "SeriesType20" : "chart",
+                          "SeriesDataStyle5_StateParameters" : [ ],
+                          "AxisAutoscale17" : true,
+                          "UseSecondaryAxis24" : false,
+                          "AxisAutoscale18" : true,
+                          "AxisAutoscale19" : true,
+                          "SeriesDataStyle21_StateParameters" : [ ],
+                          "SeriesDataStyle24_StateParameters" : [ ],
+                          "AxisFormat6" : "0000.0",
+                          "AxisFormat7" : "0000.0",
+                          "AxisFormat4" : "0000.0",
+                          "AxisFormat5" : "0000.0",
+                          "AxisFormat2" : "0000.0",
+                          "AxisFormat3" : "0000.0",
+                          "AxisFormat1" : "0000.0",
+                          "UseSecondaryAxis20" : false,
+                          "AxisMinimum24" : 0,
+                          "AxisAutoscale24" : true,
+                          "UseSecondaryAxis21" : false,
+                          "AxisMinimum23" : 0,
+                          "UseSecondaryAxis22" : false,
+                          "AxisMinimum22" : 0,
+                          "ChartTitle" : "",
+                          "AxisMinimum21" : 0,
+                          "UseSecondaryAxis23" : false,
+                          "AxisMinimum20" : 0,
+                          "AxisAutoscale20" : true,
+                          "AxisAutoscale21" : true,
+                          "AxisAutoscale22" : true,
+                          "AxisAutoscale23" : true,
+                          "EnableHover" : true,
+                          "SeriesDataStyle10_StateParameters" : [ ],
+                          "ChartType" : "bar",
+                          "SeriesDataStyle13_StateParameters" : [ ],
+                          "XAxisLabelRotation" : 0,
+                          "AxisFormat8" : "0000.0",
+                          "AxisFormat9" : "0000.0",
+                          "SeriesDataStyle16_StateParameters" : [ ],
+                          "ShowYAxisTicks" : true,
+                          "UseSecondaryAxis7" : false,
+                          "SeriesDataStyle19_StateParameters" : [ ],
+                          "Smoothing" : false,
+                          "UseSecondaryAxis6" : false,
+                          "UseSecondaryAxis9" : false,
+                          "ShowXAxisGrid" : true,
+                          "UseSecondaryAxis8" : false,
+                          "UseSecondaryAxis3" : false,
+                          "AxisAutoscale13" : true,
+                          "UseSecondaryAxis2" : false,
+                          "AxisAutoscale14" : true,
+                          "UseSecondaryAxis5" : false,
+                          "AxisAutoscale15" : true,
+                          "UseSecondaryAxis4" : false,
+                          "AxisAutoscale16" : true,
+                          "AxisAutoscale10" : true,
+                          "UseSecondaryAxis1" : false,
+                          "AxisAutoscale11" : true,
+                          "AxisAutoscale12" : true,
+                          "AxisMinimum1" : 0,
+                          "AxisAutoscale4" : true,
+                          "AxisMinimum2" : 0,
+                          "AxisAutoscale5" : true,
+                          "AxisAutoscale2" : true,
+                          "AxisMinimum3" : 0,
+                          "AxisAutoscale3" : true,
+                          "AxisMinimum4" : 0,
+                          "AxisAutoscale8" : true,
+                          "AxisAutoscale9" : true,
+                          "AxisAutoscale6" : true,
+                          "AxisAutoscale7" : true,
+                          "AxisMinimum9" : 0,
+                          "SingleDataSource" : true,
+                          "ChartTitleStyle" : "DefaultChartTitleStyle",
+                          "AxisMinimum5" : 0,
+                          "AxisAutoscale1" : true,
+                          "AxisMinimum6" : 0,
+                          "ShowXAxisLabels" : true,
+                          "AxisMinimum7" : 0,
+                          "ChartLegendStyle" : "DefaultChartLegendStyle",
+                          "AxisMinimum8" : 0,
+                          "YAxisMode" : "single",
+                          "DisplayName" : "labelchart-66",
+                          "Height" : 240,
+                          "YAxisStyle" : "DefaultChartAxisStyle",
+                          "AllowYAxisZoom" : true,
+                          "SecondaryYAxisMinimum" : 0,
+                          "UseSecondaryAxis17" : false,
+                          "UseSecondaryAxis18" : false,
+                          "UseSecondaryAxis19" : false,
+                          "UseSecondaryAxis13" : false,
+                          "UseSecondaryAxis14" : false,
+                          "UseSecondaryAxis15" : false,
+                          "UseSecondaryAxis16" : false,
+                          "StackSeries" : false,
+                          "MarkerType" : "circle",
+                          "UseSecondaryAxis10" : false,
+                          "UseSecondaryAxis11" : false,
+                          "UseSecondaryAxis12" : false
+                        }
+                      } ],
+                      "Properties" : {
+                        "Left" : 25,
+                        "HideScrollbars" : false,
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Z-index" : 10,
+                        "VerticalAnchor" : "top",
+                        "__TypeDisplayName" : "Panel",
+                        "HorizontalAnchor" : "left",
+                        "Area" : "UI",
+                        "Type" : "panel",
+                        "Top" : 25,
+                        "Visible" : true,
+                        "DisplayName" : "panel-53",
+                        "Style" : "DefaultPanelStyle",
+                        "Height" : 200,
+                        "Id" : "panel-53",
+                        "Width" : 300
+                      }
+                    } ],
+                    "Properties" : {
+                      "MinHeight" : 0,
+                      "TabWidth" : 36,
+                      "BGImageRepeat" : "no-repeat",
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ExpandCollapseTabLocation" : "outside",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "Visible" : true,
+                      "DisplayName" : "Tab #2",
+                      "Style" : "DefaultContainerStyle",
+                      "BGImageSize" : "auto",
+                      "Overlay" : false,
+                      "Expanded" : true,
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "Z-index" : 10,
+                      "TabOffset" : 0,
+                      "MinWidth" : 0,
+                      "__TypeDisplayName" : "Container",
+                      "TabLocation" : "center",
+                      "Area" : "UI",
+                      "Type" : "container",
+                      "Top" : null,
+                      "AnimateExpandCollapse" : true,
+                      "TabHeight" : 36,
+                      "Id" : "container-44"
+                    }
+                  }, {
+                    "Widgets" : [ {
+                      "Widgets" : [ ],
+                      "Properties" : {
+                        "YAxisLabels" : 2,
+                        "SeriesDataStyle14_StateParameters" : [ ],
+                        "Left" : 15,
+                        "AxisMaximum16" : 100,
+                        "AxisMaximum17" : 100,
+                        "AxisMaximum18" : 100,
+                        "ChartStyle" : "DefaultChartStyle",
+                        "AxisMaximum19" : 100,
+                        "SelectedItemStyle" : "DefaultChartSelectionStyle",
+                        "AxisMaximum12" : 100,
+                        "AxisMaximum13" : 100,
+                        "AxisMaximum14" : 100,
+                        "AxisMaximum15" : 100,
+                        "AxisMaximum2" : 100,
+                        "AxisMaximum1" : 100,
+                        "AxisMaximum20" : 100,
+                        "SeriesDataStyle7_StateParameters" : [ ],
+                        "AxisMaximum21" : 100,
+                        "AxisMaximum22" : 100,
+                        "AxisMaximum6" : 100,
+                        "SeriesDataStyle4_StateParameters" : [ ],
+                        "SecondaryYAxisMaximum" : 100,
+                        "AxisMaximum5" : 100,
+                        "AxisMaximum4" : 100,
+                        "XAxisTitle" : "Temperature",
+                        "AxisMaximum3" : 100,
+                        "AxisMaximum9" : 100,
+                        "AxisMaximum8" : 100,
+                        "AxisMaximum7" : 100,
+                        "SeriesDataStyle11_StateParameters" : [ ],
+                        "SeriesDataStyle17_StateParameters" : [ ],
+                        "ShowYAxisLabels" : true,
+                        "Z-index" : 10,
+                        "SeriesDataStyle1_StateParameters" : [ ],
+                        "AxisMaximum23" : 100,
+                        "YAxisMaximum" : 100,
+                        "AxisMaximum24" : 100,
+                        "MarkerSize" : 3,
+                        "SecondaryYAxisTitle" : "",
+                        "YAxisMinorTicks" : 1,
+                        "SecondaryYAxisZeroscale" : false,
+                        "AxisMinimum19" : 0,
+                        "AllowSelection" : true,
+                        "AxisMinimum18" : 0,
+                        "AxisMinimum17" : 0,
+                        "AxisMinimum16" : 0,
+                        "AxisMinimum15" : 0,
+                        "AxisMinimum14" : 0,
+                        "YAxisAutoscale" : true,
+                        "AxisMinimum13" : 0,
+                        "AxisMinimum12" : 0,
+                        "AxisMinimum11" : 0,
+                        "AxisMinimum10" : 0,
+                        "XAxisField" : "timestamp",
+                        "XAxisStyle" : "DefaultChartAxisStyle",
+                        "SecondaryYAxisAutoscale" : true,
+                        "XAxisFormat" : "0000.0",
+                        "SeriesDataStyle3_StateParameters" : [ ],
+                        "ChartIndicatorStyle" : "DefaultChartIndicatorStyle",
+                        "ShowXAxis" : true,
+                        "SeriesMarkerType24" : "chart",
+                        "ShowXAxisTicks" : true,
+                        "SeriesMarkerType23" : "chart",
+                        "SeriesMarkerType22" : "chart",
+                        "SeriesMarkerType21" : "chart",
+                        "SeriesMarkerType20" : "chart",
+                        "SeriesDataStyle9_StateParameters" : [ ],
+                        "SeriesDataStyle6_StateParameters" : [ ],
+                        "Area" : "UI",
+                        "LegendLocation" : "right",
+                        "SeriesDataStyle20_StateParameters" : [ ],
+                        "SeriesStyle11" : "DefaultChartStyle11",
+                        "SeriesStyle12" : "DefaultChartStyle12",
+                        "SeriesDataStyle23_StateParameters" : [ ],
+                        "SeriesStyle10" : "DefaultChartStyle10",
+                        "SeriesStyle15" : "DefaultChartStyle15",
+                        "SeriesStyle16" : "DefaultChartStyle16",
+                        "SeriesStyle13" : "DefaultChartStyle13",
+                        "SeriesStyle14" : "DefaultChartStyle14",
+                        "YAxisZeroscale" : false,
+                        "GridStyle" : "DefaultChartGridStyle",
+                        "AxisMaximum10" : 100,
+                        "AxisMaximum11" : 100,
+                        "DataField8" : "CurrentHumidity",
+                        "DataField7" : "CurrentTemperature",
+                        "YAxisFormat" : "0000.0",
+                        "DataField6" : "CurrentHumidity",
+                        "ShowYAxisGrid" : true,
+                        "DataField5" : "CurrentTemperature",
+                        "DataField4" : "CurrentHumidity",
+                        "ChartOrientation" : "vertical",
+                        "DataField3" : "CurrentTemperature",
+                        "DataField2" : "CurrentTemperature",
+                        "XAxisLabelType" : "STRING",
+                        "DataField1" : "CurrentHumidity",
+                        "NumberOfSeries" : 8,
+                        "SeriesStyle3" : "DefaultChartStyle3",
+                        "SeriesStyle2" : "DefaultChartStyle2",
+                        "SeriesStyle5" : "DefaultChartStyle5",
+                        "SeriesStyle4" : "DefaultChartStyle4",
+                        "SeriesStyle7" : "DefaultChartStyle7",
+                        "SeriesStyle6" : "DefaultChartStyle6",
+                        "SeriesStyle9" : "DefaultChartStyle9",
+                        "SeriesStyle8" : "DefaultChartStyle8",
+                        "ShowDataLoading" : true,
+                        "AxisFormat19" : "0000.0",
+                        "ShowYAxis" : true,
+                        "YAxisIntervals" : 10,
+                        "SeriesStyle1" : "DefaultChartStyle1",
+                        "AxisFormat22" : "0000.0",
+                        "AxisFormat23" : "0000.0",
+                        "AxisFormat24" : "0000.0",
+                        "SecondaryYAxisFormat" : "0000.0",
+                        "AxisFormat20" : "0000.0",
+                        "AxisFormat21" : "0000.0",
+                        "SeriesStyle19" : "DefaultChartStyle19",
+                        "SeriesDataStyle22_StateParameters" : [ ],
+                        "SeriesStyle17" : "DefaultChartStyle17",
+                        "SeriesStyle18" : "DefaultChartStyle18",
+                        "YAxisTitle" : "Humidity",
+                        "__TypeDisplayName" : "Label Chart",
+                        "SeriesMarkerType1" : "chart",
+                        "YAxisMinimum" : 0,
+                        "SeriesMarkerType2" : "chart",
+                        "Top" : 10,
+                        "SeriesType9" : "chart",
+                        "SeriesType8" : "chart",
+                        "SeriesMarkerType9" : "chart",
+                        "SeriesStyle22" : "DefaultChartStyle22",
+                        "SeriesType7" : "chart",
+                        "SeriesStyle23" : "DefaultChartStyle23",
+                        "SeriesType6" : "chart",
+                        "SeriesMarkerType7" : "chart",
+                        "SeriesStyle20" : "DefaultChartStyle20",
+                        "SeriesType5" : "chart",
+                        "SeriesMarkerType8" : "chart",
+                        "SeriesStyle21" : "DefaultChartStyle21",
+                        "Id" : "labelchart-52",
+                        "SeriesType4" : "chart",
+                        "SeriesMarkerType5" : "chart",
+                        "SeriesType3" : "chart",
+                        "SeriesMarkerType6" : "chart",
+                        "ShowLegend" : true,
+                        "SeriesType2" : "chart",
+                        "SeriesMarkerType3" : "chart",
+                        "SeriesStyle24" : "DefaultChartStyle24",
+                        "SeriesType1" : "chart",
+                        "SeriesMarkerType4" : "chart",
+                        "SeriesType10" : "chart",
+                        "SeriesType11" : "chart",
+                        "SeriesType12" : "chart",
+                        "SeriesType13" : "chart",
+                        "SeriesType14" : "chart",
+                        "SeriesType15" : "chart",
+                        "SeriesType16" : "chart",
+                        "AxisZeroscale20" : false,
+                        "SeriesType17" : "chart",
+                        "SeriesType18" : "chart",
+                        "SeriesType19" : "chart",
+                        "AxisZeroscale19" : false,
+                        "AxisZeroscale18" : false,
+                        "LegendWidth" : 0,
+                        "AxisZeroscale11" : false,
+                        "Visible" : true,
+                        "AxisZeroscale10" : false,
+                        "AxisZeroscale13" : false,
+                        "AxisZeroscale12" : false,
+                        "AxisZeroscale15" : false,
+                        "Width" : 640,
+                        "AxisZeroscale14" : false,
+                        "AxisZeroscale17" : false,
+                        "AxisZeroscale16" : false,
+                        "SeriesType21" : "chart",
+                        "SeriesType22" : "chart",
+                        "SeriesType23" : "chart",
+                        "SeriesType24" : "chart",
+                        "SeriesMarkerType19" : "chart",
+                        "AxisZeroscale9" : false,
+                        "SeriesMarkerType18" : "chart",
+                        "SeriesDataStyle18_StateParameters" : [ ],
+                        "SeriesMarkerType17" : "chart",
+                        "SeriesMarkerType16" : "chart",
+                        "ResponsiveLayout" : true,
+                        "AxisZeroscale6" : false,
+                        "AxisZeroscale5" : false,
+                        "SeriesDataStyle15_StateParameters" : [ ],
+                        "AxisZeroscale8" : false,
+                        "AxisZeroscale7" : false,
+                        "AxisZeroscale2" : false,
+                        "AxisZeroscale1" : false,
+                        "AxisZeroscale4" : false,
+                        "AxisZeroscale3" : false,
+                        "AxisFormat11" : "0000.0",
+                        "AxisFormat12" : "0000.0",
+                        "Type" : "labelchart",
+                        "AxisFormat13" : "0000.0",
+                        "LegendOrientation" : "vertical",
+                        "AxisFormat14" : "0000.0",
+                        "AxisFormat15" : "0000.0",
+                        "AxisFormat16" : "0000.0",
+                        "AxisFormat17" : "0000.0",
+                        "SeriesDataStyle12_StateParameters" : [ ],
+                        "AxisFormat18" : "0000.0",
+                        "ChartAreaStyle" : "DefaultChartAreaStyle",
+                        "SeriesMarkerType15" : "chart",
+                        "AxisZeroscale22" : false,
+                        "SeriesDataStyle8_StateParameters" : [ ],
+                        "SeriesMarkerType14" : "chart",
+                        "AxisZeroscale21" : false,
+                        "SeriesMarkerType13" : "chart",
+                        "AxisZeroscale24" : false,
+                        "SeriesMarkerType12" : "chart",
+                        "AxisZeroscale23" : false,
+                        "SeriesMarkerType11" : "chart",
+                        "SeriesMarkerType10" : "chart",
+                        "SeriesDataStyle2_StateParameters" : [ ],
+                        "AxisFormat10" : "0000.0",
+                        "SeriesType20" : "chart",
+                        "SeriesDataStyle5_StateParameters" : [ ],
+                        "AxisAutoscale17" : true,
+                        "UseSecondaryAxis24" : false,
+                        "AxisAutoscale18" : true,
+                        "AxisAutoscale19" : true,
+                        "SeriesDataStyle21_StateParameters" : [ ],
+                        "SeriesDataStyle24_StateParameters" : [ ],
+                        "AxisFormat6" : "0000.0",
+                        "AxisFormat7" : "0000.0",
+                        "AxisFormat4" : "0000.0",
+                        "AxisFormat5" : "0000.0",
+                        "AxisFormat2" : "0000.0",
+                        "AxisFormat3" : "0000.0",
+                        "AxisFormat1" : "0000.0",
+                        "UseSecondaryAxis20" : false,
+                        "AxisMinimum24" : 0,
+                        "AxisAutoscale24" : true,
+                        "UseSecondaryAxis21" : false,
+                        "AxisMinimum23" : 0,
+                        "UseSecondaryAxis22" : false,
+                        "AxisMinimum22" : 0,
+                        "ChartTitle" : "temperature showing",
+                        "AxisMinimum21" : 0,
+                        "UseSecondaryAxis23" : false,
+                        "AxisMinimum20" : 0,
+                        "AxisAutoscale20" : true,
+                        "AxisAutoscale21" : true,
+                        "AxisAutoscale22" : true,
+                        "AxisAutoscale23" : true,
+                        "EnableHover" : true,
+                        "SeriesDataStyle10_StateParameters" : [ ],
+                        "ChartType" : "bar",
+                        "SeriesDataStyle13_StateParameters" : [ ],
+                        "XAxisLabelRotation" : 0,
+                        "AxisFormat8" : "0000.0",
+                        "AxisFormat9" : "0000.0",
+                        "SeriesDataStyle16_StateParameters" : [ ],
+                        "ShowYAxisTicks" : true,
+                        "UseSecondaryAxis7" : false,
+                        "SeriesDataStyle19_StateParameters" : [ ],
+                        "Smoothing" : false,
+                        "UseSecondaryAxis6" : false,
+                        "UseSecondaryAxis9" : false,
+                        "ShowXAxisGrid" : true,
+                        "UseSecondaryAxis8" : false,
+                        "UseSecondaryAxis3" : false,
+                        "AxisAutoscale13" : true,
+                        "UseSecondaryAxis2" : false,
+                        "AxisAutoscale14" : true,
+                        "UseSecondaryAxis5" : false,
+                        "AxisAutoscale15" : true,
+                        "UseSecondaryAxis4" : false,
+                        "AxisAutoscale16" : true,
+                        "AxisAutoscale10" : true,
+                        "UseSecondaryAxis1" : false,
+                        "AxisAutoscale11" : true,
+                        "AxisAutoscale12" : true,
+                        "AxisMinimum1" : 0,
+                        "AxisAutoscale4" : true,
+                        "AxisMinimum2" : 0,
+                        "AxisAutoscale5" : true,
+                        "AxisAutoscale2" : true,
+                        "AxisMinimum3" : 0,
+                        "DataLabel2" : "",
+                        "AxisAutoscale3" : true,
+                        "AxisMinimum4" : 0,
+                        "AxisAutoscale8" : true,
+                        "AxisAutoscale9" : true,
+                        "AxisAutoscale6" : true,
+                        "AxisAutoscale7" : true,
+                        "AxisMinimum9" : 0,
+                        "SingleDataSource" : true,
+                        "ChartTitleStyle" : "DefaultChartTitleStyle",
+                        "AxisMinimum5" : 0,
+                        "AxisAutoscale1" : true,
+                        "AxisMinimum6" : 0,
+                        "DataLabel1" : "",
+                        "ShowXAxisLabels" : true,
+                        "AxisMinimum7" : 0,
+                        "ChartLegendStyle" : "DefaultChartLegendStyle",
+                        "AxisMinimum8" : 0,
+                        "YAxisMode" : "single",
+                        "DisplayName" : "labelchart-52",
+                        "Height" : 240,
+                        "YAxisStyle" : "DefaultChartAxisStyle",
+                        "AllowYAxisZoom" : true,
+                        "SecondaryYAxisMinimum" : 0,
+                        "UseSecondaryAxis17" : false,
+                        "UseSecondaryAxis18" : false,
+                        "UseSecondaryAxis19" : false,
+                        "UseSecondaryAxis13" : false,
+                        "UseSecondaryAxis14" : false,
+                        "UseSecondaryAxis15" : false,
+                        "UseSecondaryAxis16" : false,
+                        "StackSeries" : true,
+                        "MarkerType" : "circle",
+                        "UseSecondaryAxis10" : false,
+                        "UseSecondaryAxis11" : false,
+                        "UseSecondaryAxis12" : false
+                      }
+                    } ],
+                    "Properties" : {
+                      "MinHeight" : 0,
+                      "TabWidth" : 36,
+                      "BGImageRepeat" : "no-repeat",
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ExpandCollapseTabLocation" : "outside",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "Visible" : true,
+                      "DisplayName" : "Tab #3",
+                      "Style" : "DefaultContainerStyle",
+                      "BGImageSize" : "auto",
+                      "Overlay" : false,
+                      "Expanded" : true,
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "Z-index" : 10,
+                      "TabOffset" : 0,
+                      "MinWidth" : 0,
+                      "__TypeDisplayName" : "Container",
+                      "TabLocation" : "center",
+                      "Area" : "UI",
+                      "Type" : "container",
+                      "AnimateExpandCollapse" : true,
+                      "TabHeight" : 36,
+                      "Id" : "container-47"
+                    }
+                  }, {
+                    "Widgets" : [ {
+                      "Widgets" : [ ],
+                      "Properties" : {
+                        "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                        "IsEditable" : false,
+                        "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                        "Left" : 35,
+                        "ShowDataLoading" : true,
+                        "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                        "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                        "FocusStyle" : "DefaultFocusStyle",
+                        "TabSequence" : 0,
+                        "RowFormat_StateParameters" : [ ],
+                        "CellTextWrapping" : false,
+                        "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                        "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                        "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                        "Visible" : true,
+                        "DisplayName" : "dhxgrid-67",
+                        "Height" : 200,
+                        "Width" : 400,
+                        "MultiSelect" : false,
+                        "CurrentScrollTop" : 0,
+                        "ResponsiveLayout" : true,
+                        "ShowAllColumns" : false,
+                        "Z-index" : 10,
+                        "AlignHeader" : false,
+                        "__TypeDisplayName" : "Grid",
+                        "ScrollTop" : 0,
+                        "RowHeight" : 30,
+                        "ColumnFormat" : {
+                          "formatInfo" : [ {
+                            "ValidationMessage" : "",
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Title" : "temp",
+                            "ValidationExpression" : "",
+                            "FormatOptions" : {
+                              "renderer" : "DEFAULT"
+                            },
+                            "FieldName" : "temp",
+                            "Width" : "auto"
+                          }, {
+                            "ValidationMessage" : "",
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "Title" : "humi",
+                            "ValidationExpression" : "",
+                            "FormatOptions" : {
+                              "renderer" : "DEFAULT"
+                            },
+                            "FieldName" : "humi",
+                            "Width" : "auto"
+                          } ]
+                        },
+                        "Area" : "UI",
+                        "Type" : "dhxgrid",
+                        "Top" : 10,
+                        "IsPrintLayout" : false,
+                        "Id" : "dhxgrid-67",
+                        "RowHoverStyle" : "DefaultRowHoverStyle",
+                        "AutoSelectFirstRow" : false,
+                        "GridHeaderTextCase" : "capitalize"
+                      }
+                    } ],
+                    "Properties" : {
+                      "MinHeight" : 0,
+                      "TabWidth" : 36,
+                      "BGImageRepeat" : "no-repeat",
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ExpandCollapseTabLocation" : "outside",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "Visible" : true,
+                      "DisplayName" : "Tab #4",
+                      "Style" : "DefaultContainerStyle",
+                      "BGImageSize" : "auto",
+                      "Overlay" : false,
+                      "Expanded" : true,
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "Z-index" : 10,
+                      "TabOffset" : 0,
+                      "MinWidth" : 0,
+                      "__TypeDisplayName" : "Container",
+                      "TabLocation" : "center",
+                      "Area" : "UI",
+                      "Type" : "container",
+                      "AnimateExpandCollapse" : true,
+                      "TabHeight" : 36,
+                      "Id" : "container-65"
+                    }
+                  } ],
+                  "Properties" : {
+                    "Left" : 60,
+                    "Tab1Value" : "Tab1Value",
+                    "ShowDataLoading" : true,
+                    "Tab8Image" : "",
+                    "Tab14Value" : "Tab14Value",
+                    "Tab15Visible" : true,
+                    "Tab14Visible" : true,
+                    "Tab16Visible" : true,
+                    "Tab10Image" : "",
+                    "Tab4Disabled" : false,
+                    "Tab11Visible" : true,
+                    "Tab12Visible" : true,
+                    "Tab15Name" : "Tab15Name",
+                    "Tab13Visible" : true,
+                    "Tab10Visible" : true,
+                    "Tab8Name" : "Tab8Name",
+                    "Tab14Disabled" : false,
+                    "Tab11Image" : "",
+                    "Z-index" : 10,
+                    "TabContentStyle" : "DefaultTabContentStyle",
+                    "__TypeDisplayName" : "Tabs - Responsive",
+                    "Tab2Value" : "Tab2Value",
+                    "Tab9Image" : "",
+                    "Top" : 30,
+                    "Tab1Name" : "stream data",
+                    "Id" : "tabsv2-42",
+                    "Tab6Image" : "",
+                    "Tab12Value" : "Tab12Value",
+                    "Tab7Disabled" : false,
+                    "Tab15Value" : "Tab15Value",
+                    "Tab1Visible" : true,
+                    "Tab2Visible" : true,
+                    "Tab3Name" : "Tab3Name",
+                    "Tab3Disabled" : false,
+                    "Tab5Image" : "",
+                    "Tab6Visible" : true,
+                    "Tab5Visible" : true,
+                    "Tab9Disabled" : false,
+                    "Tab10Disabled" : false,
+                    "Tab9Visible" : true,
+                    "Visible" : true,
+                    "Width" : 300,
+                    "Tab10Value" : "Tab10Value",
+                    "Tab5Name" : "Tab5Name",
+                    "Tab13Value" : "Tab13Value",
+                    "ResponsiveLayout" : true,
+                    "Tab6Value" : "Tab6Value",
+                    "Tab3Value" : "Tab3Value",
+                    "RoundedCorners" : true,
+                    "Tab16Value" : "Tab16Value",
+                    "Tab12Name" : "Tab12Name",
+                    "Tab12Image" : "",
+                    "Type" : "tabsv2",
+                    "Tab15Image" : "",
+                    "Tab13Disabled" : false,
+                    "TabHeight" : 27,
+                    "Tab9Value" : "Tab9Value",
+                    "Tab6Disabled" : false,
+                    "Tab7Value" : "Tab7Value",
+                    "Tab16Image" : "",
+                    "Tab7Name" : "Tab7Name",
+                    "Tab14Name" : "Tab14Name",
+                    "TabSpacing" : 2,
+                    "Tab2Image" : "",
+                    "MaxTabWidth" : 256,
+                    "Tab2Disabled" : false,
+                    "CurrentTab" : 2,
+                    "Tab16Name" : "Tab16Name",
+                    "Tab8Value" : "Tab8Value",
+                    "Tab9Name" : "Tab9Name",
+                    "Tab16Disabled" : false,
+                    "NumberOfTabs" : 4,
+                    "Tab10Name" : "Tab10Name",
+                    "Area" : "UI",
+                    "Tab5Value" : "Tab5Value",
+                    "TabDisabledStyle" : "DefaultTabDisabledStyle",
+                    "Tab12Disabled" : false,
+                    "Tab2Name" : "Graph",
+                    "Tab3Image" : "",
+                    "Tab3Visible" : true,
+                    "Tab5Disabled" : false,
+                    "TabUnselectedStyle" : "DefaultTabUnselectedStyle",
+                    "Tab4Visible" : true,
+                    "DefaultTabAtRuntime" : 1,
+                    "Tab7Visible" : true,
+                    "TabSelectedStyle" : "DefaultTabSelectedStyle",
+                    "Tab11Value" : "Tab11Value",
+                    "Tab13Image" : "",
+                    "Tab1Disabled" : false,
+                    "Tab4Name" : "Tab4Name",
+                    "Tab8Visible" : true,
+                    "DisplayName" : "tabsv2-42",
+                    "Height" : 300,
+                    "Tab4Value" : "Tab4Value",
+                    "Tab14Image" : "",
+                    "Tab11Name" : "Tab11Name",
+                    "Tab4Image" : "",
+                    "Tab1Image" : "",
+                    "Tab15Disabled" : false,
+                    "Tab7Image" : "",
+                    "Tab11Disabled" : false,
+                    "Tab8Disabled" : false,
+                    "Tab13Name" : "Tab13Name",
+                    "Tab6Name" : "Tab6Name"
+                  }
+                } ],
+                "Properties" : {
+                  "MinHeight" : 0,
+                  "TabWidth" : 36,
+                  "BGImageRepeat" : "no-repeat",
+                  "ShowDataLoading" : true,
+                  "ShowExpandCollapseTab" : false,
+                  "ExpandCollapseTabLocation" : "outside",
+                  "TabExpandStyle" : "DefaultTabExpandStyle",
+                  "Visible" : true,
+                  "DisplayName" : "Column 2",
+                  "Style" : "DefaultContainerStyle",
+                  "BGImageSize" : "auto",
+                  "Overlay" : false,
+                  "Expanded" : true,
+                  "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                  "OverlayIsTransparent" : false,
+                  "ResponsiveLayout" : true,
+                  "Z-index" : 10,
+                  "TabOffset" : 0,
+                  "MinWidth" : 0,
+                  "__TypeDisplayName" : "Container",
+                  "TabLocation" : "center",
+                  "Area" : "UI",
+                  "Type" : "container",
+                  "AnimateExpandCollapse" : true,
+                  "TabHeight" : 36,
+                  "Id" : "container-19"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 10,
+                "IncludeSpacingInFixedAreas" : false,
+                "ShowDataLoading" : true,
+                "HeaderHeight" : 0,
+                "PctRow4" : 0,
+                "PctRow3" : 0,
+                "PctRow2" : 50,
+                "FooterHeight" : 0,
+                "PctRow1" : 50,
+                "PctRow8" : 0,
+                "PctRow7" : 0,
+                "PctRow6" : 0,
+                "PctRow5" : 0,
+                "LeftSidebar" : false,
+                "RightSidebar" : false,
+                "PctColumn5" : 1,
+                "Visible" : true,
+                "DisplayName" : "layout-17",
+                "PctColumn6" : 1,
+                "PctColumn3" : 1,
+                "PrintWidth" : 650,
+                "PctColumn4" : 1,
+                "PctColumn1" : 50,
+                "PctColumn2" : 50,
+                "PrintMarginTopBottom" : 0.5,
+                "Rows" : 2,
+                "RightSidebarWidth" : 0,
+                "PrintMarginLeftRight" : 0.5,
+                "PctColumn7" : 1,
+                "PctColumn8" : 1,
+                "ResponsiveLayout" : true,
+                "Columns" : 2,
+                "Z-index" : 10,
+                "Spacing" : 2,
+                "Orientation" : "vertical",
+                "__TypeDisplayName" : "Layout",
+                "Area" : "UI",
+                "Type" : "layout",
+                "LeftSidebarWidth" : 0,
+                "Header" : false,
+                "Top" : 0,
+                "IsPrintLayout" : false,
+                "Footer" : false,
+                "Id" : "layout-17"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "Visible" : true,
+              "DisplayName" : "Row 2",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "TabOffset" : 0,
+              "MinWidth" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Area" : "UI",
+              "Type" : "container",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-13"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 10,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 0,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 100,
+            "FooterHeight" : 0,
+            "PctRow1" : 100,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "LeftSidebar" : false,
+            "RightSidebar" : false,
+            "PctColumn5" : 1,
+            "Visible" : true,
+            "DisplayName" : "layout-11",
+            "PctColumn6" : 1,
+            "PctColumn3" : 1,
+            "PrintWidth" : 650,
+            "PctColumn4" : 1,
+            "PctColumn1" : 50,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 1,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "PctColumn8" : 1,
+            "ResponsiveLayout" : true,
+            "Columns" : 0,
+            "Z-index" : 10,
+            "Spacing" : 2,
+            "Orientation" : "vertical",
+            "__TypeDisplayName" : "Layout",
+            "Area" : "UI",
+            "Type" : "layout",
+            "LeftSidebarWidth" : 0,
+            "Header" : false,
+            "Top" : 15,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "layout-11"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Column 2",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-4"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 75,
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 0,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 50,
+        "FooterHeight" : 0,
+        "PctRow1" : 50,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "LeftSidebar" : true,
+        "RightSidebar" : false,
+        "PctColumn5" : 1,
+        "Visible" : true,
+        "DisplayName" : "layout-1",
+        "PctColumn6" : 1,
+        "PctColumn3" : 1,
+        "PrintWidth" : 650,
+        "PctColumn4" : 1,
+        "PctColumn1" : 40,
+        "PctColumn2" : 60,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 0,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "PctColumn8" : 1,
+        "ResponsiveLayout" : true,
+        "Columns" : 2,
+        "Z-index" : 10,
+        "Spacing" : 0,
+        "Orientation" : "horizontal",
+        "__TypeDisplayName" : "Layout",
+        "Area" : "UI",
+        "Type" : "layout",
+        "LeftSidebarWidth" : 150,
+        "Header" : false,
+        "Top" : 5,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 67,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "GetImplementingThings",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "ThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "d4354e12-4de3-4214-8616-27fb9a91c86c",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "ThingTemplates_VendingMachineTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "f96e4e28-7681-4693-b735-a2b27b74382a",
+    "EventTriggerId" : "GetImplementingThings",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "SetProperties",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "341ae946-5739-4507-b352-f9e87c925d42",
+    "EventTriggerId" : "button-31",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "fb572296-dde9-4120-88b2-02d8be14d7d5",
+    "EventTriggerId" : "SetProperties",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "Refresh",
+    "Id" : "23c4cf4c-0032-480d-90ca-d8c6dd3bc09c",
+    "EventTriggerId" : "autorefresh-32",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "getallprop",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_VM-TR1",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "bd47a09b-bdd9-46d3-9b2a-1dfe32898f2e",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "getallprop",
+    "EventTriggerSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventHandlerId" : "Things_VM-TR1",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "4d38c9ae-9cd7-4163-ad33-e6f630ef7eee",
+    "EventTriggerId" : "GetProperties",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "GetAllRecords",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_ACMESQLDatabase1",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "98f2afdb-07a0-4c1b-826d-611f05dad9aa",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  } ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetImplementingThings",
+    "Id" : "026db82e-86c9-49e3-bf12-0b9dd9faaafb",
+    "SourceSection" : "ThingTemplates_VendingMachineTemplate",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "dhxlist-20"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceId" : "GetImplementingThings",
+    "Id" : "f00a75b5-8d8f-457d-9991-143e8f3c77e7",
+    "SourceSection" : "ThingTemplates_VendingMachineTemplate",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "value",
+      "TargetPropertyType" : "Entity",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "name"
+    } ],
+    "TargetId" : "EntityName"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "f69e5098-bd5b-4b2b-8c13-0a4ba59993b5",
+    "SourceSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "CurrentTemperature"
+    } ],
+    "TargetId" : "gauge-21"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "589e8083-af68-4153-a46e-415135a390af",
+    "SourceSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "CurrentHumidity"
+    } ],
+    "TargetId" : "leddisplay-23"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceId" : "numericentry-26",
+    "Id" : "d9d09364-8c0f-4a01-a649-0c25bbb03fa0",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "CurrentTemperature",
+      "TargetPropertyType" : "Property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "SetProperties"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceId" : "numericentry-29",
+    "Id" : "d25d9a08-6f70-4ff9-8f38-d07535e82e2e",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "CurrentHumidity",
+      "TargetPropertyType" : "Property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "SetProperties"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "getallprop",
+    "Id" : "7bc98125-ed01-4d62-91ae-de77dd44b4b5",
+    "SourceSection" : "Things_VM-TR1",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "dhxgrid-45"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "getallprop",
+    "Id" : "d4f9fa96-ddf9-4bf6-85e2-1db366d8b440",
+    "SourceSection" : "Things_VM-TR1",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "labelchart-52"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetAllRecords",
+    "Id" : "4ccb0ec3-6ae6-436c-b0d4-f90b346e076a",
+    "SourceSection" : "Things_ACMESQLDatabase1",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "labelchart-66"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetAllRecords",
+    "Id" : "9ae69c57-c75b-4b43-bab8-82483f8e1588",
+    "SourceSection" : "Things_ACMESQLDatabase1",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "dhxgrid-67"
+  } ],
+  "Data" : {
+    "ThingTemplates_VendingMachineTemplate" : {
+      "EntityType" : "ThingTemplates",
+      "Services" : [ {
+        "Target" : "GetImplementingThings",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "cf1d4dec-13a6-4925-be1e-f5112e07037e",
+        "Name" : "GetImplementingThings"
+      } ],
+      "EntityName" : "VendingMachineTemplate",
+      "Id" : "7e9a93c6-4f16-4645-b3f7-8ee9fe0b97b3",
+      "DataName" : "ThingTemplates_VendingMachineTemplate"
+    },
+    "Things_ACMESQLDatabase1" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "GetAllRecords",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "7ee16e08-7333-4ccf-9cf3-07b5a693b136",
+        "Name" : "GetAllRecords"
+      } ],
+      "EntityName" : "ACMESQLDatabase1",
+      "Id" : "69d8b048-b6be-4057-a51b-9889bd72b0d2",
+      "DataName" : "Things_ACMESQLDatabase1"
+    },
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "DynamicThingTemplates_VendingMachineTemplate" : {
+      "EntityType" : "DynamicThingTemplates",
+      "Services" : [ {
+        "Target" : "GetProperties",
+        "Parameters" : { },
+        "APIMethod" : "get",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "d5dfbf39-c155-4123-8c07-d427aa9526d1",
+        "Name" : "GetProperties"
+      }, {
+        "Target" : "SetProperties",
+        "Parameters" : { },
+        "APIMethod" : "get",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "6b1ee3eb-c677-4a38-a65b-d6c5fcfb586a",
+        "Name" : "SetProperties"
+      } ],
+      "EntityName" : "VendingMachineTemplate",
+      "Id" : "64b97a24-c057-4f15-a8e0-98a5958b8e32",
+      "DataName" : "DynamicThingTemplates_VendingMachineTemplate"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    },
+    "Things_VM-TR1" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "getallprop",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "1abb36e0-5591-4370-a36a-bea2a2e69d3e",
+        "Name" : "getallprop"
+      } ],
+      "EntityName" : "VM-TR1",
+      "Id" : "77d01018-40ac-444c-ba09-f61afd187e7a",
+      "DataName" : "Things_VM-TR1"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2017-02-07T23:06:57.660+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:15:42.725+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:15:44.783+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:17:29.415+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:17:30.745+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:21:42.388+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:21:43.887+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:22:17.191+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:22:17.951+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:22:20.383+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:24:21.637+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:25:09.635+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:25:58.227+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:25:59.746+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:27:25.108+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:32:13.823+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:32:52.036+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:35:37.638+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:36:03.951+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:36:23.798+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:37:19.255+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:43:16.307+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:44:05.373+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:44:47.232+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:45:27.790+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:46:53.683+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:47:08.790+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:47:19.243+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:47:28.248+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:48:00.056+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:53:17.598+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-07T23:53:19.699+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-02-08T12:17:52.679+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-01T22:53:54.590+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-10T11:00:04.817+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T22:52:31.599+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T22:52:47.594+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-22T21:13:59.057+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-22T21:14:07.170+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-22T21:14:30.676+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-23T19:05:01.227+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-27T23:00:47.142+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-27T23:06:26.465+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-27T23:08:10.626+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-27T23:09:10.528+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-28T16:50:48.378+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-28T16:50:49.536+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-29T20:42:34.883+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-29T20:42:35.883+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-25T15:16:48.684+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-25T15:29:21.402+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-25T15:29:23.394+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:28:03.895+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:33:17.011+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:33:28.556+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:33:54.393+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:33:55.837+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:38:44.185+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:38:45.380+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:41:07.865+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:42:49.630+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T15:42:50.566+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:08:15.442+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:08:16.541+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:29:54.308+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:34:17.811+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:34:18.756+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:36:30.606+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:36:32.112+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:37:18.589+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:37:20.563+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:38:35.808+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:38:36.971+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T16:42:53.165+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:11:18.266+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:11:19.467+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:13:46.590+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:13:47.339+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:14:48.521+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:14:49.589+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:17:50.085+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-26T17:17:51.631+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T12:05:49.083+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T16:09:26.860+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T16:09:28.193+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T16:11:50.898+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T16:11:52.225+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T16:12:47.261+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-28T16:12:48.217+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-23T11:00:41.133+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T11:53:19.637+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T11:56:39.788+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:00:12.670+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:01:31.048+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:01:34.302+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:02:14.638+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:02:16.800+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:04:51.594+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:04:54.715+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:07:58.191+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:08:01.080+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:12:19.255+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:12:20.563+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-25T12:13:50.714+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-26T22:14:22.568+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-27T12:37:09.493+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-01T12:40:35.515+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-02T14:10:02.674+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-03T09:57:57.550+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-05T21:37:12.686+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-05T21:37:14.664+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-06-08T08:05:39.557+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-21T11:35:02.097+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-21T11:35:03.596+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-31T12:43:01.285+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-31T12:43:10.519+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-02T16:22:03.102+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:22:07.187+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:24:43.939+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:25:54.220+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:27:51.599+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:28:43.164+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:42:37.390+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T11:05:20.179+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T10:10:42.404+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:02:10.770+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-19T07:58:09.650+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-27T10:44:01.770+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-29T10:40:58.872+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T16:03:36.652+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:01:05.436+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:03:09.092+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:03:10.392+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:04:47.376+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:27:14.254+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:34:03.596+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:36:44.953+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:36:45.850+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:36:46.495+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:36:46.901+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:38:31.439+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:38:33.858+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:39:25.673+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:39:28.230+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T20:43:22.090+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-31T09:55:27.101+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-31T18:00:14.803+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T09:51:03.154+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T10:26:16.862+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T10:27:09.388+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T10:32:17.203+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T10:33:16.773+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:02:29.288+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:03:30.667+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:05:32.928+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:14:32.983+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:14:34.089+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:14:34.745+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:14:35.414+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:14:36.663+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T11:15:44.274+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:12.164+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:13.046+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:13.530+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:14.219+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:14.857+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:15.518+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T12:48:16.315+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T16:21:06.429+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T16:21:07.769+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T16:22:47.948+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T16:22:48.631+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T16:22:49.626+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T16:59:07.289+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:02:12.109+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:02:14.508+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:05:54.222+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:05:54.881+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:11.619+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:12.331+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:12.806+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:13.056+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:13.288+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:13.713+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:13.941+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:14.150+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:14.544+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:06:14.741+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:10:05.329+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:10:06.119+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:10:06.607+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:10:06.846+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:10:17.725+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:21:30.252+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:54:15.555+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:54:15.799+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:55:10.980+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:55:12.121+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:55:19.017+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:57:55.498+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T17:57:58.070+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T18:09:48.086+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T18:22:32.182+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T19:53:45.153+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T19:53:48.542+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T20:20:52.143+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T20:20:55.479+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-01T20:25:11.877+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T10:05:50.286+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T12:42:10.253+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T13:08:29.149+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T13:09:13.033+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T13:16:16.163+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T13:16:23.656+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T13:16:25.220+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T13:57:21.864+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T16:05:01.808+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:12:37.406+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:37:21.924+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:42:48.364+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:42:51.655+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:42:53.296+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:48:18.972+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:52:17.011+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:53:28.826+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-02T17:53:38.143+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:45:43.077+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:54:10.710+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:54:19.868+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:54:43.125+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:55:24.719+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:55:26.475+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:56:18.361+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:56:21.497+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:57:24.997+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T13:58:14.889+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:06:41.037+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:06:41.925+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:06:44.146+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:23:58.907+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:24:01.215+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:24:44.743+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:24:52.961+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:24:54.018+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:24:55.390+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:25:43.200+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:25:44.507+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:25:45.506+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:25:57.948+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:27:03.058+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-04T14:30:36.418+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-12T19:42:26.655+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-12T23:40:03.869+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-13T16:31:58.917+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-13T16:32:12.878+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-21T18:40:22.993+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-21T18:40:25.373+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-21T18:46:50.031+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-21T18:48:45.546+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-21T19:27:36.204+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-21T19:27:40.305+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:42:18.586+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:42:21.461+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:46:03.586+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:46:47.608+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:47:28.063+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:47:56.503+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:55:23.734+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T10:55:24.885+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:02:29.217+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:02:32.351+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:35:01.535+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:35:03.188+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:37:20.907+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:37:31.873+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:38:18.112+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:38:19.603+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:39:49.765+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:42:30.907+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:42:55.658+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:43:50.048+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:45:09.585+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:45:45.917+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:45:47.138+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:49:02.171+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:49:33.227+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-22T11:58:01.730+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-01T12:38:46.196+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-01T12:38:57.491+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:47:00.349+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:49:41.671+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:49:42.963+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:49:47.874+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:51:07.420+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:51:08.962+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-07T16:55:25.323+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-21T12:46:00.177+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-27T14:00:22.296+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T11:57:35.565+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T11:57:38.490+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T11:58:18.268+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T11:58:19.142+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T13:54:10.545+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-29T15:18:40.078+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-29T13:42:35.646+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-06-07T14:41:25.968+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
