@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-06-07T14:41:25.969+05:30" name="VendingMachineMash" projectName="" rows="0.0" tags="Applications:ThingWorx Training">
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-06-08T19:44:40.944+05:30" name="VendingMachineMash" projectName="" rows="0.0" tags="Applications:ThingWorx Training">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -2607,6 +2607,8 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-29T15:18:40.078+05:30" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-29T13:42:35.646+05:30" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-06-07T14:41:25.968+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-06-08T11:04:18.831+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-06-08T19:44:40.906+05:30" user="Administrator"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
