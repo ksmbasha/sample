@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="Represents our Edge Vending Machines" documentationContent="" effectiveThingPackage="RemoteThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-11-19T11:02:34.346+05:30" name="RemoteVendingMachines" projectName="" published="false" tags="Applications:ThingWorx Training" thingTemplate="RemoteThing" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="ALWAYS" aspect.defaultValue="0.0" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="true" baseType="NUMBER" category="" description="Current humidity of vending machine 1" isLocalOnly="false" name="Prop_Equipment1Hum" ordinal="8"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="ALWAYS" aspect.defaultValue="0.0" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="true" baseType="NUMBER" category="" description="Current temperature of vending machine 1" isLocalOnly="false" name="Prop_Equipment1Temp" ordinal="7"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="ALWAYS" aspect.defaultValue="0.0" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="true" baseType="NUMBER" category="" description="Current humidity of vending machine 2" isLocalOnly="false" name="Prop_Equipment2Hum" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="ALWAYS" aspect.defaultValue="0.0" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="true" baseType="NUMBER" category="" description="Current temperature of vending machine 2" isLocalOnly="false" name="Prop_Equipment2Temp" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="-1.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="NEVER" aspect.defaultValue="70.23" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="HumSetPoint of vending machine 1" isLocalOnly="false" name="Prop_HumSetPoint1" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="-1.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="NEVER" aspect.defaultValue="70.93" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="HumSetPoint of vending machine 2" isLocalOnly="false" name="Prop_HumSetPoint2" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="-1.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="NEVER" aspect.defaultValue="35.34" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="TempSetPoint of vending machine 1" isLocalOnly="false" name="Prop_TempSetPoint1" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="-1.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="NEVER" aspect.defaultValue="35.78" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="TempSetPoint of vending machine 2" isLocalOnly="false" name="Prop_TempSetPoint2" ordinal="1"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding foldType="NONE" name="Prop_Equipment1Hum" pushThreshold="0.0" pushType="VALUE" sourceName="Prop_Equipment1Hum" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_Equipment1Temp" pushThreshold="0.0" pushType="VALUE" sourceName="Prop_Equipment1Temp" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_Equipment2Hum" pushThreshold="0.0" pushType="VALUE" sourceName="Prop_Equipment2Hum" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_Equipment2Temp" pushThreshold="0.0" pushType="VALUE" sourceName="Prop_Equipment2Temp" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_HumSetPoint1" pushThreshold="0.0" pushType="NEVER" sourceName="Prop_HumSetPoint1" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_HumSetPoint2" pushThreshold="0.0" pushType="NEVER" sourceName="Prop_HumSetPoint2" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_TempSetPoint1" pushThreshold="0.0" pushType="NEVER" sourceName="Prop_TempSetPoint1" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="Prop_TempSetPoint2" pushThreshold="0.0" pushType="NEVER" sourceName="Prop_TempSetPoint2" timeout="0"/>
+            </RemotePropertyBindings>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <lastConnection>
+                    <Value>2017-08-03T14:41:42.943+05:30</Value>
+                    <Timestamp>2017-08-03T14:41:42.943+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </lastConnection>
+                <Prop_HumSetPoint2>
+                    <Value>70.93</Value>
+                    <Timestamp>2017-03-12T22:34:43.275+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Prop_HumSetPoint2>
+                <Prop_TempSetPoint2>
+                    <Value>35.78</Value>
+                    <Timestamp>2017-03-12T22:34:43.302+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Prop_TempSetPoint2>
+                <Prop_TempSetPoint1>
+                    <Value>35.34</Value>
+                    <Timestamp>2017-03-12T22:34:43.329+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Prop_TempSetPoint1>
+                <Prop_HumSetPoint1>
+                    <Value>70.23</Value>
+                    <Timestamp>2017-03-12T22:34:43.362+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Prop_HumSetPoint1>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, tags : updated, thingTemplate : updated&#10;" timestamp="2017-03-12T22:18:24.825+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T22:24:03.244+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : Prop_TempSetPoint2 : added remote property from browse, Prop_TempSetPoint1 : added remote property from browse, Prop_HumSetPoint2 : added remote property from browse, Prop_HumSetPoint1 : added remote property from browse, Prop_Equipment2Temp : added remote property from browse, Prop_Equipment2Hum : added remote property from browse, Prop_Equipment1Temp : added remote property from browse, Prop_Equipment1Hum : added remote property from browse&#10;" timestamp="2017-03-12T22:33:00.670+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-03T07:54:25.987+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-11-19T11:02:34.194+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
