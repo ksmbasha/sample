@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2019-02-20T11:52:06.341+05:30" name="AcmeVendingCorp1" projectName="" published="false" tags="Applications:ThingWorx Training" thingTemplate="GenericThing" valueStream="Process Value Stream">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="ConnectionID" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="current" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="kw" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="Powerfactor" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="DATETIME" category="" description="" isLocalOnly="false" name="timestamp" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="voltage" ordinal="4"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="This service will retrieve the ThingWorx RSS Feed" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetThingWorxFeed">
+                        <ResultType aspect.dataShape="ThingWorxFeedData" baseType="INFOTABLE" description="Resulting Table " name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="GetThingWorxFeed" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetThingWorxFeed1">
+                        <ResultType aspect.dataShape="ThingWorxFeedData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="GetThingWorxFeed" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetThingWorxFeed1Copy">
+                        <ResultType aspect.dataShape="ELecDS" baseType="JSON" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="GetThingWorxFeed" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetThingWorxFeed1CopyCopy">
+                        <ResultType aspect.dataShape="ELecDS" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="infotab">
+                        <ResultType aspect.dataShape="ThingWorxFeedData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="Testinfo">
+                        <ResultType aspect.dataShape="ThingWorxFeedData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="GetThingWorxFeed">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	proxyScheme: undefined /* STRING */,
+	headers: undefined /* JSON */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	useNTLM: undefined /* BOOLEAN */,
+	workstation: undefined /* STRING */,
+	useProxy: undefined /* BOOLEAN */,
+	withCookies: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	url: "https://news.google.com/news/feeds" /* STRING */,
+	timeout: undefined /* NUMBER */,
+	proxyPort: undefined /* INTEGER */,
+	password: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	username: undefined /* STRING */
+};
+
+// result: XML
+var xmlPage = Resources["ContentLoaderFunctions"].GetXML(params);
+
+var params1 = {
+	infoTableName : "InfoTable",
+	dataShapeName : "ThingWorxFeedData"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ThingWorxFeedData)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params1);
+        for each (var item in xmlPage.channel.item) {
+    var row = new Object();
+	row.title = item.title;
+	 row.link = item.link;
+result.AddRow(row); 
+        }
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetThingWorxFeed1">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+   
+    url: "https://news.google.com/news/feeds"
+   
+};
+ 
+// result: XML 
+var xmlPage = Resources["ContentLoaderFunctions"].GetXML(params);
+ 
+var params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "ThingWorxFeedData" 
+};  
+ 
+// CreateInfoTableFromDataShape 
+var result =
+    Resources["InfoTableFunctions"].
+    CreateInfoTableFromDataShape(params);
+    
+for each (var item in xmlPage.channel.item) {
+    var row = new Object();
+    row.title = item.title;
+    row.link = item.link;
+    logger.warn(row);
+
+
+
+    result.AddRow(row); 
+}
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetThingWorxFeed1Copy">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+   
+    url: "http://aws.axelta.com/services/node/getTransactions?user_name=mithilesh.prajapati@pidilite.co.in&device_no=PDL005&node_no=022&limit=1"
+ 
+};
+ 
+// result: XML 
+var result = Resources["ContentLoaderFunctions"].GetJSON(params);
+me.kw=result.array[0].sensor_2;
+me.timestamp=result.array[0].timestamp*1000;
+
+var params1 = {
+   
+    url: "http://aws.axelta.com/services/node/getTransactions?user_name=mithilesh.prajapati@pidilite.co.in&device_no=PDL005&node_no=021&limit=1"
+ 
+};
+ 
+// result: XML 
+var result1 = Resources["ContentLoaderFunctions"].GetJSON(params1);
+me.current=result1.array[0].sensor_2;
+//me.time=result.array[0].timestamp*1000;
+
+var x = 440; // can be any number
+var rand = Math.floor(Math.random()*x) + 1;
+logger.info("voltage"+rand);
+me.voltage=rand;
+
+var x = 25; // can be any number
+var rand1 = (Math.random()*x) + 1;
+logger.info("voltage"+rand1);
+me.Powerfactor=rand1;
+
+var textArray = [
+    'F-101',
+    'F-102',
+    'F-103',
+    'F-104',
+    'F-105'
+];
+var rand2 = Math.floor(Math.random()*textArray.length);
+//var rand3=audioElement.setAttribute('src', textArray[rand2]);
+var rand3 = textArray[rand2];
+logger.info("connection id"+rand3);
+me.ConnectionID=rand3;
+
+var myJson = {
+  "jsonData": {
+    "ConnectionID": me.ConnectionID,
+    "current": me.current,
+    "voltage": me.voltage,
+    "KW": me.kw,
+    "Powerfactor": me.Powerfactor,
+    "timestamp": me.timestamp
+  }
+}; 
+
+logger.info("connection id"+me.ConnectionID);
+var params ={
+    
+	
+    //proxyScheme: undefined /* STRING */,
+	//headers: Basic QWRtaW5pc3RyYXRvcjphZG1pbg== /* JSON */,
+	//ignoreSSLErrors: undefined /* BOOLEAN */,
+	//useNTLM: undefined /* BOOLEAN */,
+	//workstation: undefined /* STRING */,
+	//useProxy: undefined /* BOOLEAN */,
+	//withCookies: undefined /* BOOLEAN */,
+	//proxyHost: undefined /* STRING */,
+	url: "http://52.88.77.124/Thingworx/Things/Pocmeter/Services/Getmeterdata?appkey=0eb56380-58a4-46ea-a1f1-2505666f491c" /* STRING */,
+	content: myJson /* JSON */,
+	//timeout: undefined /* NUMBER */,
+	//proxyPort: undefined /* INTEGER */,
+	password: "admin" /* STRING */,
+	//domain: undefined /* STRING */,
+	username: "Administrator" /* STRING */
+    
+   
+    
+};
+
+// result: JSON
+var result = Resources["ContentLoaderFunctions"].PutJSON(params);
+logger.info("posted successfully");
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetThingWorxFeed1CopyCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+   
+    url: "http://aws.axelta.com/services/node/getTransactions?user_name=mithilesh.prajapati@pidilite.co.in&device_no=PDL005&node_no=022&limit=1"
+ 
+};
+ 
+// result: XML 
+var json = Resources["ContentLoaderFunctions"].GetJSON(params);
+for(var i=0;i<json.array.length;i++){
+ 
+   Infotable.AddRow({Name:json[i].timestamp, Value:json[i].kw});
+ 
+    }
+//}
+result = InfoTable;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="infotab">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+    headers: undefined /* JSON */,
+    useProxy: undefined /* BOOLEAN */,
+    proxyHost: undefined /* STRING */,
+    useNTLM: undefined /* BOOLEAN */,
+    ignoreSSLErrors: undefined /* BOOLEAN */,
+    proxyPort: undefined /* INTEGER */,
+    withCookies: undefined /* BOOLEAN */,
+    password: undefined /* STRING */,
+    url: "https://www.yahoo.com/news/rss/",
+    workstation: undefined /* STRING */,
+    username: undefined /* STRING */,
+    proxyScheme: undefined /* STRING */,
+    domain: undefined /* STRING */,
+    timeout: undefined /* NUMBER */,
+};
+ 
+// result: XML 
+var xmlPage = Resources["ContentLoaderFunctions"].GetXML(params);
+ 
+var params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "ThingWorxFeedData" 
+};  
+ 
+// CreateInfoTableFromDataShape 
+var result =
+    Resources["InfoTableFunctions"].
+    CreateInfoTableFromDataShape(params);
+    
+for each (var item in xmlPage.channel.item) {
+    var row = new Object();
+    row.title = item.title;
+    row.link = item.link;
+    result.AddRow(row); 
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="Testinfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+proxyScheme: undefined /* STRING */,
+headers: undefined /* JSON */,
+ignoreSSLErrors: undefined /* BOOLEAN */,
+useNTLM: undefined /* BOOLEAN */,
+workstation: undefined /* STRING */,
+useProxy: undefined /* BOOLEAN */,
+withCookies: undefined /* BOOLEAN */,
+proxyHost: undefined /* STRING */,
+url: "https://news.google.com/news/feeds" /* STRING */,
+timeout: undefined /* NUMBER */,
+proxyPort: undefined /* INTEGER */,
+password: undefined /* STRING */,
+domain: undefined /* STRING */,
+username: undefined /* STRING */
+};
+// result: XML
+var xmlPage = Resources["ContentLoaderFunctions"].GetXML(params);
+var params1 = {
+infoTableName : "InfoTable",
+dataShapeName : "ThingWorxFeedData"
+};
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ThingWorxFeedData)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params1);
+for each (var item in xmlPage.channel.item) {
+var row = new Object();
+row.title = item.title;
+row.link = item.link;
+result.AddRow(row);
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="ConnectionID"/>
+                <AlertDefinitions name="current"/>
+                <AlertDefinitions name="kw"/>
+                <AlertDefinitions name="Powerfactor"/>
+                <AlertDefinitions name="timestamp"/>
+                <AlertDefinitions name="voltage"/>
+            </AlertConfigurations>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated, thingTemplate : updated&#10;services : GetThingWorxFeed1 : Description updated, Output Updated, Code Updated, Service Added&#10;" timestamp="2017-04-24T16:56:45.313+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-04-24T17:03:42.744+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-04-24T17:19:47.336+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-24T17:41:58.944+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-04-24T17:43:04.098+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-04-24T17:49:35.462+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-06-05T09:00:48.797+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Output Updated, Code Updated&#10;" timestamp="2017-06-05T21:31:34.803+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Output Updated&#10;" timestamp="2017-06-05T21:43:48.329+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-06-05T21:44:55.660+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-06-05T21:50:27.000+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-06-05T21:51:34.048+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-06-05T21:53:11.931+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Output Updated&#10;" timestamp="2017-07-24T10:56:51.460+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-24T10:57:06.169+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-24T10:57:06.837+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Output Updated&#10;" timestamp="2017-07-24T10:58:05.597+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-07-24T10:59:42.116+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1 : Code Updated&#10;" timestamp="2017-07-24T11:05:19.832+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-03T14:49:27.155+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-07T16:04:08.998+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-09T13:18:03.060+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated, Output Updated, Service Added&#10;" timestamp="2017-12-11T12:22:12.814+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:23:32.732+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:24:05.043+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:24:22.539+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:47:18.378+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:47:55.444+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:48:11.321+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:48:45.195+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:49:45.234+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:50:03.642+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:51:16.339+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Output Updated&#10;" timestamp="2017-12-11T12:57:13.673+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:57:49.391+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T12:58:44.718+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Input parameter jsonData Added, Inputs updated, Code Updated&#10;" timestamp="2017-12-11T13:00:50.258+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:05:20.073+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:09:28.866+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:11:11.042+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : jsonn : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:12:40.451+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:14:18.868+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Input parameter jsonData Updated, Inputs updated, Code Updated&#10;" timestamp="2017-12-11T13:40:49.766+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : kw : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:43:07.058+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : kw : Updated&#10;" timestamp="2017-12-11T13:44:50.879+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:46:04.480+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : kw : Updated&#10;" timestamp="2017-12-11T13:46:42.911+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:47:27.343+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:48:10.348+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T13:48:47.667+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1CopyCopy : Code Updated, Output Updated, Service Added&#10;" timestamp="2017-12-11T14:10:48.569+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1CopyCopy : Code Updated&#10;" timestamp="2017-12-11T14:11:31.217+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1CopyCopy : Code Updated, GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T14:53:09.299+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T14:56:09.088+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T14:57:35.432+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:01:33.642+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:03:03.392+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:06:05.409+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:07:20.697+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:09:46.254+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:16:17.901+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:17:16.949+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:21:00.142+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:22:15.596+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:24:02.086+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:26:48.233+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:27:18.453+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:28:30.870+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:28:47.156+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:32:31.303+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;properties : kw : Updated, timestamp : Updated&#10;" timestamp="2017-12-11T15:33:17.311+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:33:19.043+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : time : Added, timestamp : removed&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:35:13.903+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : time : removed&#10;" timestamp="2017-12-11T15:36:31.297+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:36:54.620+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:36:56.083+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : current : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:40:49.624+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:43:19.125+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : jsonn : removed&#10;" timestamp="2017-12-11T15:44:02.752+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:50:15.261+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : voltage : Added&#10;" timestamp="2017-12-11T15:51:22.703+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : voltage : Updated&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T15:54:32.608+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T15:54:33.990+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : Powerfactor : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T16:01:01.046+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T16:02:00.219+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ConenctionID : Added&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T16:09:46.678+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ConenctionID : removed&#10;services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T16:11:57.364+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ConnectionID : Added&#10;" timestamp="2017-12-11T16:12:15.395+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T16:14:11.661+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:06:39.601+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T18:09:27.723+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:14:14.924+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:16:37.338+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:25:27.183+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:26:10.081+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:38:03.850+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T18:46:45.760+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-11T18:53:21.919+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T18:53:22.925+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T18:53:41.626+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed  : Description updated, Output Updated, Code Updated, GetThingWorxFeed : Service Added&#10;" timestamp="2017-12-20T20:07:11.615+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-20T20:08:37.207+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed : Code Updated&#10;" timestamp="2017-12-20T20:09:17.348+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Testinfo : Output Updated, Code Updated, Service Added&#10;" timestamp="2017-12-20T20:28:47.850+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-28T13:43:07.881+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-29T15:18:34.938+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Code Updated, info1 : Output Updated, infotab : Service Added&#10;" timestamp="2019-02-20T11:52:05.708+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
