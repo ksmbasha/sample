@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2019-02-26T12:30:26.221+05:30" name="Gettankdt" projectName="" published="false" tags="" thingTemplate="DataTable" valueStream="Process Value Stream">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Data Thing Configuration" isMultiRow="false" name="DataThingSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="STRING" description="Persistence Provider Name" name="persistenceProvider" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider><![CDATA[ThingworxPersistenceProvider]]></persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Index Settings" isMultiRow="true" name="Indexes" ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Index Field Names" baseType="STRING" description="Index fields" name="fieldNames" ordinal="1"/>
+                            <FieldDefinition aspect.friendlyName="Index Name" baseType="STRING" description="Index name" name="name" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows/>
+                </ConfigurationTable>
+                <ConfigurationTable description="Data Shape Configuration" isMultiRow="false" name="Settings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Data Shape" baseType="DATASHAPENAME" description="Data shape" name="dataShape" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json><![CDATA[{"fieldDefinitions":{"node_no3":{"name":"node_no3","aspects":{},"description":"","baseType":"STRING","ordinal":14},"node_no2":{"name":"node_no2","aspects":{},"description":"","baseType":"STRING","ordinal":13},"device_key":{"name":"device_key","aspects":{},"description":"","baseType":"STRING","ordinal":2},"node_no4":{"name":"node_no4","aspects":{},"description":"","baseType":"STRING","ordinal":15},"app_version":{"name":"app_version","aspects":{},"description":"","baseType":"STRING","ordinal":0},"node_no1":{"name":"node_no1","aspects":{},"description":"","baseType":"STRING","ordinal":12},"device_no":{"name":"device_no","aspects":{},"description":"","baseType":"STRING","ordinal":3},"device_type":{"name":"device_type","aspects":{},"description":"","baseType":"STRING","ordinal":4},"sensor_5":{"name":"sensor_5","aspects":{},"description":"","baseType":"NUMBER","ordinal":10},"sensor_6":{"name":"sensor_6","aspects":{},"description":"","baseType":"NUMBER","ordinal":11},"sensor_3":{"name":"sensor_3","aspects":{},"description":"","baseType":"NUMBER","ordinal":8},"sensor_4":{"name":"sensor_4","aspects":{},"description":"","baseType":"NUMBER","ordinal":9},"sensor_2":{"name":"sensor_2","aspects":{},"description":"","baseType":"NUMBER","ordinal":6},"client":{"name":"client","aspects":{},"description":"","baseType":"STRING","ordinal":1},"node_no":{"name":"node_no","aspects":{"isPrimaryKey":true},"description":"","baseType":"STRING","ordinal":5},"timestamp":{"name":"timestamp","aspects":{},"description":"","baseType":"DATETIME","ordinal":7}}}]]></json>
+                            </accumulatedDataShape>
+                            <dataShape><![CDATA[Gettankdatashape]]></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="app_version" ordinal="8"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="client" ordinal="9"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="device_key" ordinal="7"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="device_no" ordinal="15"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="device_type" ordinal="16"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="node_no" ordinal="10"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="node_no1" ordinal="11"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="node_no2" ordinal="12"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="node_no3" ordinal="13"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="node_no4" ordinal="14"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="sensor_2" ordinal="1"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="sensor_3" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="sensor_4" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="sensor_5" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="sensor_6" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="DATETIME" category="" description="" isLocalOnly="false" name="timestamp" ordinal="2"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="Entermyinfo">
+                        <ResultType aspect.dataShape="Gettankdatashape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="app_version" ordinal="6"/>
+                            <FieldDefinition baseType="STRING" description="" name="client" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="device_key" ordinal="2"/>
+                            <FieldDefinition baseType="STRING" description="" name="device_no" ordinal="4"/>
+                            <FieldDefinition baseType="STRING" description="" name="device_type" ordinal="5"/>
+                            <FieldDefinition baseType="JSON" description="" name="jsonData" ordinal="9"/>
+                            <FieldDefinition baseType="STRING" description="" name="node_no" ordinal="8"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="sensor_2" ordinal="7"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="sensor_3" ordinal="10"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="timestamp" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="Getallprop">
+                        <ResultType aspect.dataShape="Gettankdatashape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="smwat">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="JSON" description="" name="data" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="testchart">
+                        <ResultType aspect.dataShape="Gettankdatashape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="PERSISTENCEPROVIDERNAME" description="" name="dataa" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="Entermyinfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var values = Things["Gettankdt"].CreateValues();
+logger.warn("jsonData"+jsonData);
+values.device_key = jsonData.device_key; //STRING
+values.app_version = jsonData.app_version; //STRING
+
+values.sensor_2 = jsonData.nodes[0].sensor_2; //STRING
+values.sensor_3 = jsonData.nodes[1].sensor_2;
+values.sensor_4 = jsonData.nodes[2].sensor_2;
+values.sensor_5 = jsonData.nodes[3].sensor_2;
+values.sensor_6 = jsonData.nodes[4].sensor_2;
+values.client = jsonData.client; //STRING
+values.node_no = jsonData.nodes[0].node_no;//STRING [Primary Key]
+values.node_no1 = jsonData.nodes[1].node_no; 
+values.node_no2 = jsonData.nodes[2].node_no; 
+values.node_no3 = jsonData.nodes[3].node_no; 
+values.node_no4 = jsonData.nodes[4].node_no; 
+values.device_no = jsonData.device_no; //STRING
+values.device_type = jsonData.device_type; //STRING
+values.timestamp = jsonData.timestamp; //NUMBER
+values.timestamp = values.timestamp *1000;
+/*logger.warn("lenth"+jsonData.nodes);
+for(var i=0;i<=jsonData.nodes.length;i++){
+     logger.warn("abc"+i+"_"+jsonData.nodes[0].sensor_2);
+    };*/
+/*var obj=jsonData.nodes;
+for (var key in obj) {
+  //if (obj.hasOwnProperty(key)) {
+    var val = obj[key];
+    //console.log(val);
+       logger.warn("val "+val);*/
+ // }
+//}
+//logger.warn("timestamp value is"+values.timestamp);
+//var nodes = jsonData.nodes[0];
+
+//var node_no=[],sensor_2=[];
+//logger.warn("sensor2 value "+nodes);
+//for(var i=0;i<=nodes.length;i++) //in nodes)
+//{
+    //logger.warn("Entered into the loop"); 
+  //    var node_no = nodes[i].node_no;
+    //var sensor_2 = nodes[i].sensor_2;
+//me.sensor_2 = values.sensor_2;
+//logger.warn("sensor2 value is"+sensor_2 + node_no);    
+  // values = sensor_2;
+//}
+//values.sensor_2 = sensor_2[0];
+//values.node_no = node_no[0];
+
+//values.node_no = jsonData.nodes.node_no;
+//logger.warn("sensor2 value is"+values.node_no);  
+//values.sensor_2 = "6523"//jsonData.nodes.sensor_2;
+//me.sensor_2 = jsonData.nodes.sensor_2;
+//logger.warn("sensor2 value is"+values.sensor_2);
+//me.sensor_2=values.sensor_2;
+me.timestamp = values.timestamp;
+me.sensor_2 = values.sensor_2;
+me.sensor_3 = values.sensor_3;
+me.sensor_4 = values.sensor_4;
+me.sensor_5 = values.sensor_5;
+me.sensor_6 = values.sensor_6;
+me.client = values.client;
+me.app_version = values.app_version;
+me.device_key = values.device_key;
+me.node_no = values.node_no;
+me.node_no1 = values.node_no1;
+me.node_no2 = values.node_no2;
+me.node_no3 = values.node_no3;
+me.node_no4 = values.node_no4;
+me.device_no = values.device_no;
+me.device_type = values.device_type;
+
+
+var params = {
+
+	values : values,
+};
+
+var id = Things["Gettankdt"].AddOrUpdateDataTableEntry(params);
+//var id = Things["Gettankdt"].AddDataTableEntry(params);
+
+// Gettankdatashape entry object
+var newEntry = new Object();
+newEntry.node_no3 = me.node_no3; // STRING
+newEntry.node_no2 = me.node_no2; // STRING
+newEntry.device_key = me.device_key; // STRING
+newEntry.node_no4 = me.node_no4; // STRING
+newEntry.app_version = me.app_version; // STRING
+newEntry.node_no1 = me.node_no1; // STRING
+newEntry.device_no = me.device_no; // STRING
+logger.warn("new entry device no"+newEntry.device_no);
+newEntry.device_type = me.device_type; // STRING
+logger.warn("new entry device type"+newEntry.device_type);
+newEntry.sensor_5 = me.sensor_5; // STRING
+newEntry.sensor_6 = me.sensor_6; // STRING
+newEntry.sensor_3 = me.sensor_3; // STRING
+newEntry.sensor_4 = me.sensor_4; // STRING
+newEntry.sensor_2 = me.sensor_2; // STRING
+newEntry.client = me.client; // STRING
+newEntry.node_no = me.node_no; // STRING
+newEntry.timestamp = me.timestamp; // DATETIME - isPrimaryKey = true
+
+var params1 = {
+    infoTableName : "InfoTable",
+    dataShapeName : "Gettankdatashape" 
+};  
+
+var result =
+    Resources["InfoTableFunctions"].
+    CreateInfoTableFromDataShape(params1);
+result.AddRow(newEntry); ]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="Getallprop">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	oldestFirst: undefined /* BOOLEAN */,
+	maxItems: undefined /* NUMBER */,
+	endDate: undefined /* DATETIME */,
+	query: undefined /* QUERY */,
+	startDate: undefined /* DATETIME */
+};
+
+// result: INFOTABLE
+var result = Things["Gettankdt"].QueryPropertyHistory(params);
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="smwat">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code/>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="testchart">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//var values = Things["Gettankdt"].CreateValues();
+//values.device_key = jsonData.device_key; //STRING
+//logger.warn("device key"+values.device_key);
+//values.app_version = jsonData.app_version; //STRING
+//values.sensor_2 = jsonData.nodes[0].sensor_2; //STRING
+//values.sensor_3 = jsonData.nodes[1].sensor_2;
+//values.sensor_4 = jsonData.nodes[2].sensor_2;
+//values.sensor_5 = jsonData.nodes[3].sensor_2;
+//values.sensor_6 = jsonData.nodes[4].sensor_2;
+//values.client = jsonData.client; //STRING
+//values.node_no = jsonData.nodes[0].node_no;//STRING [Primary Key]
+//values.node_no1 = jsonData.nodes[1].node_no; 
+//values.node_no2 = jsonData.nodes[2].node_no; 
+//values.node_no3 = jsonData.nodes[3].node_no; 
+//values.node_no4 = jsonData.nodes[4].node_no; 
+//values.device_no = jsonData.device_no; //STRING
+//values.device_type = jsonData.device_type; //STRING
+//values.timestamp = jsonData.timestamp; //NUMBER
+//values.timestamp = values.timestamp *1000;
+/*logger.warn("lenth"+jsonData.nodes);
+for(var i=0;i<=jsonData.nodes.length;i++){
+     logger.warn("abc"+i+"_"+jsonData.nodes[0].sensor_2);
+    };*/
+/*var obj=jsonData.nodes;
+for (var key in obj) {
+  //if (obj.hasOwnProperty(key)) {
+    var val = obj[key];
+    //console.log(val);
+       logger.warn("val "+val);*/
+ // }
+//}
+//logger.warn("timestamp value is"+values.timestamp);
+//var nodes = jsonData.nodes[0];
+
+//var node_no=[],sensor_2=[];
+//logger.warn("sensor2 value "+nodes);
+//for(var i=0;i<=nodes.length;i++) //in nodes)
+//{
+    //logger.warn("Entered into the loop"); 
+  //    var node_no = nodes[i].node_no;
+    //var sensor_2 = nodes[i].sensor_2;
+//me.sensor_2 = values.sensor_2;
+//logger.warn("sensor2 value is"+sensor_2 + node_no);    
+  // values = sensor_2;
+//}
+//values.sensor_2 = sensor_2[0];
+//values.node_no = node_no[0];
+
+//values.node_no = jsonData.nodes.node_no;
+//logger.warn("sensor2 value is"+values.node_no);  
+//values.sensor_2 = "6523"//jsonData.nodes.sensor_2;
+//me.sensor_2 = jsonData.nodes.sensor_2;
+//logger.warn("sensor2 value is"+values.sensor_2);
+/*me.sensor_2=values.sensor_2;
+me.timestamp = values.timestamp;
+me.sensor_2 = values.sensor_2;
+me.sensor_3 = values.sensor_3;
+me.sensor_4 = values.sensor_4;
+me.sensor_5 = values.sensor_5;
+me.sensor_6 = values.sensor_6;
+me.client = values.client;
+me.app_version = values.app_version;
+me.device_key = values.device_key;
+me.node_no = values.node_no;
+me.node_no1 = values.node_no1;
+me.node_no2 = values.node_no2;
+me.node_no3 = values.node_no3;
+me.node_no4 = values.node_no4;
+*/
+
+
+/*var params = {
+
+	values : values,
+};
+
+var id = Things["Gettankdt"].AddOrUpdateDataTableEntry(params);
+//var id = Things["Gettankdt"].AddDataTableEntry(params);
+*/
+// Gettankdatashape entry object
+var newEntry = new Object();
+newEntry.node_no3 = me.node_no3; // STRING
+newEntry.node_no2 = me.node_no2; // STRING
+newEntry.device_key = me.device_key; // STRING
+logger.warn("new entry device key"+newEntry.device_key);
+newEntry.node_no4 = me.node_no4; // STRING
+newEntry.app_version = me.app_version; // STRING
+newEntry.node_no1 = me.node_no1; // STRING
+newEntry.device_no = me.device_no; // STRING
+newEntry.device_type = me.device_type; // STRING
+newEntry.sensor_5 = me.sensor_5; // STRING
+newEntry.sensor_6 = me.sensor_6; // STRING
+newEntry.sensor_3 = me.sensor_3; // STRING
+newEntry.sensor_4 = me.sensor_4; // STRING
+newEntry.sensor_2 = me.sensor_2; // STRING
+newEntry.client = me.client; // STRING
+newEntry.node_no = me.node_no; // STRING
+newEntry.timestamp = me.timestamp; // DATETIME - isPrimaryKey = true
+newEntry.device_no = me.device_no;
+newEntry.device_type = me.device_type;
+
+var params1 = {
+    infoTableName : "InfoTable",
+    dataShapeName : "Gettankdatashape" 
+};  
+
+var result =
+    Resources["InfoTableFunctions"].
+    CreateInfoTableFromDataShape(params1);
+result.AddRow(newEntry); 
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="Alert" source="" sourceProperty="sensor_2">
+                        <ServiceImplementation description="" handlerName="Script" name="sensor_2.Alert">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+var params = {
+	cc: undefined /* STRING */,
+	bcc: undefined /* STRING */,
+	subject: "test message gettankdt" /* STRING */,
+	from: "ksmbasha@gmail.com" /* STRING */,
+	to: "ksmbasha@axelta.com" /* STRING */,
+	body: "testing the meesage when the application will close" /* HTML */
+};
+
+// no return
+Things["ACMEVendingNotifier"].SendMessage(params);
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="app_version"/>
+                <AlertDefinitions name="client"/>
+                <AlertDefinitions name="device_key"/>
+                <AlertDefinitions name="device_no"/>
+                <AlertDefinitions name="device_type"/>
+                <AlertDefinitions name="node_no"/>
+                <AlertDefinitions name="node_no1"/>
+                <AlertDefinitions name="node_no2"/>
+                <AlertDefinitions name="node_no3"/>
+                <AlertDefinitions name="node_no4"/>
+                <AlertDefinitions name="sensor_2">
+                    <AlertDefinition alertType="Above" description="sensor value test" enabled="true" name="sensorvalue" priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition aspect.friendlyName="Limit" baseType="NUMBER" description="Limit to compare" name="limit" ordinal="0"/>
+                                    <FieldDefinition aspect.defaultValue="true" aspect.friendlyName="Include Limit?" baseType="BOOLEAN" description="Limit includes value" name="limitInclusive" ordinal="1"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limitInclusive>true</limitInclusive>
+                                    <limit>200.0</limit>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions name="sensor_3"/>
+                <AlertDefinitions name="sensor_4"/>
+                <AlertDefinitions name="sensor_5"/>
+                <AlertDefinitions name="sensor_6"/>
+                <AlertDefinitions name="timestamp"/>
+            </AlertConfigurations>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2017-07-31T10:32:53.931+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="configuration : dataShape : updated&#10;" timestamp="2017-07-31T10:41:21.539+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated, Inputs updated, Service Added,  : Input parameter timestamp Added, Input parameter device_key Added, Input parameter client Added, Input parameter device_no Added, Input parameter device_type Added, Input parameter app_version Added, Input parameter sensor_2 Added, Input parameter node_no Added, Input parameter jsonData Added&#10;" timestamp="2017-07-31T11:01:34.532+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-07-31T11:02:30.801+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-07-31T11:05:51.400+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-07-31T11:11:47.054+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-31T11:37:31.145+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-07-31T11:49:02.014+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-01T10:32:26.514+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-01T10:37:25.651+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-01T10:47:47.963+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Added&#10;" timestamp="2017-08-11T12:59:01.084+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-11T12:59:41.218+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-11T12:59:41.921+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-11T15:16:54.984+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-11T15:18:28.623+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-11T15:53:31.814+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-14T13:07:43.130+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:07:44.155+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-14T13:24:13.308+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:24:13.967+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:24:14.251+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:24:14.480+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:24:14.678+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:25:15.560+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-14T13:26:01.129+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:26:01.848+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-14T13:29:53.062+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-14T13:31:06.137+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T13:31:06.790+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-14T16:09:11.474+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:17:07.983+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T16:18:09.644+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:18:10.581+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T16:25:03.333+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:25:04.058+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T16:26:35.634+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:26:36.305+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T16:27:36.007+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:27:36.655+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:27:36.876+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T16:27:37.136+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T17:12:23.466+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T17:12:24.163+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T17:14:23.755+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T17:14:24.354+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-16T17:16:00.956+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-16T17:16:02.055+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated, Output Updated&#10;" timestamp="2017-08-17T10:11:17.702+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-17T14:12:30.828+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-08-17T14:13:35.741+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-17T14:13:36.797+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-17T15:02:40.475+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-17T15:26:05.353+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-08-17T15:26:35.585+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-17T15:27:36.354+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-17T15:30:46.506+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-08-17T15:32:22.804+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-17T15:32:41.075+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T10:54:25.411+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:54:26.097+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-08-18T10:55:18.567+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:55:19.463+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T11:05:22.212+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Added&#10;" timestamp="2017-08-18T11:08:36.353+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-18T11:27:27.846+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T11:29:48.723+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T11:29:50.456+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T11:30:50.446+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-18T11:32:50.036+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2017-08-18T11:34:30.877+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T11:34:32.008+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-18T11:37:01.118+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2017-08-18T11:38:29.574+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2017-08-18T11:39:46.194+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T11:39:51.122+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-18T11:41:29.051+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T11:42:46.987+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T11:43:37.053+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T11:45:01.818+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated, Code Updated&#10;" timestamp="2017-08-18T12:02:53.292+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T12:03:53.116+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-18T12:04:55.108+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T12:37:06.210+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2017-08-18T12:40:17.278+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2017-08-18T12:41:35.912+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T12:41:52.994+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter timestamp Updated, Inputs updated&#10;" timestamp="2017-08-18T12:42:42.339+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T12:42:49.377+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2017-08-18T13:18:11.265+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T13:18:23.278+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T13:18:38.413+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-22T13:11:54.848+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-08-22T13:20:02.552+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-22T13:20:03.352+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-04T17:02:20.799+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-05T10:56:08.052+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-05T13:00:39.509+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-05T13:04:23.329+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-06T15:37:45.640+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-07T10:04:20.410+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-07T10:06:25.766+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T10:06:26.507+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-09-07T10:10:07.627+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T10:10:08.670+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-09-07T10:12:05.497+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-09-07T10:12:49.728+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated, Output Updated&#10;" timestamp="2017-09-07T10:48:42.555+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated, Code Updated, Service Added&#10;" timestamp="2017-09-07T11:19:53.953+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-09-07T11:21:36.290+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated&#10;" timestamp="2017-09-07T11:22:23.071+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-09-07T11:25:03.013+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated&#10;" timestamp="2017-09-07T11:38:15.026+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T11:38:26.962+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T11:40:26.225+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated&#10;" timestamp="2017-09-07T11:40:47.483+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated&#10;" timestamp="2017-09-07T11:42:15.146+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Input parameter sensor_2 Added, Inputs updated, Input parameter timestamp Added&#10;" timestamp="2017-09-07T11:42:56.515+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T12:47:29.333+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated&#10;" timestamp="2017-09-07T14:18:19.322+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated&#10;" timestamp="2017-09-07T14:18:45.540+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-07T14:23:50.511+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-07T14:38:19.150+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Code Updated&#10;" timestamp="2017-09-07T15:24:51.976+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated&#10;" timestamp="2017-09-07T15:25:58.186+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated, Code Updated&#10;" timestamp="2017-09-07T15:27:27.919+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T09:51:16.406+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:39:33.746+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T10:39:35.231+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:44:51.776+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:52:28.020+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:54:15.499+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:56:34.188+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:58:05.833+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T10:59:53.231+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:05:22.677+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:06:09.633+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:07:26.871+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:09:38.083+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:11:02.077+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:12:54.114+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:15:12.757+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:16:43.519+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:23:33.393+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:25:17.674+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:26:43.804+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:27:29.752+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:28:26.816+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:30:39.984+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:33:04.725+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:34:40.845+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:35:31.949+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:36:00.940+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:36:50.441+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:37:39.415+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:40:30.609+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:42:58.250+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:46:00.487+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:50:03.241+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:50:48.007+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:52:50.576+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T11:57:46.665+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:00:00.190+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:01:16.036+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:02:40.607+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:04:20.612+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:07:56.560+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:08:47.701+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T12:18:59.855+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:29:23.630+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:36:19.123+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:38:15.153+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:39:52.403+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:48:04.368+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:50:04.546+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:51:44.323+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T12:54:17.394+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:32:59.003+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:34:06.298+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:37:14.344+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:37:47.811+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:39:15.321+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:39:52.233+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:43:40.650+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T14:43:43.115+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:45:27.146+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:48:11.351+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:48:42.618+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T14:48:54.646+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:49:42.795+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:50:59.873+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:52:36.764+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:53:53.154+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:54:19.541+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:55:10.777+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:55:43.645+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:56:25.038+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:57:57.471+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:58:39.093+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T14:59:59.169+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T15:00:57.947+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T15:03:02.866+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T15:03:46.893+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T15:06:23.822+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T15:07:06.886+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T15:08:01.606+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T15:08:43.782+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter sensor_3 Added, Inputs updated, Code Updated&#10;" timestamp="2017-09-08T15:45:14.527+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-08T15:57:10.247+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_3 : Added&#10;" timestamp="2017-09-08T15:59:41.943+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_3 : removed&#10;services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-08T16:04:57.290+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T10:44:54.009+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_3 : Added&#10;services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T10:47:04.335+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:41:08.813+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:43:25.363+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:45:19.329+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:48:59.437+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:50:22.773+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:51:12.326+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:52:52.481+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:57:29.578+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:58:18.653+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T11:59:07.996+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T12:53:56.342+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-11T12:55:41.318+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_4 : Added, sensor_5 : Added, sensor_6 : Added&#10;" timestamp="2017-09-11T12:56:11.484+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T13:00:40.990+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-11T13:00:42.104+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T16:07:28.946+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Output Updated&#10;" timestamp="2017-09-11T16:12:14.842+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-11T16:20:47.528+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-11T17:01:09.519+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-11T18:00:03.429+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T09:47:52.608+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T09:48:59.247+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T09:49:45.445+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T09:50:47.860+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T10:02:53.944+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T10:04:28.402+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T10:07:53.367+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T10:09:47.487+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T10:11:25.465+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T10:12:09.368+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : device_key : Added, app_version : Added, client : Added, node_no : Added, node_no1 : Added, node_no2 : Added, node_no3 : Added, node_no4 : Added&#10;" timestamp="2017-09-12T10:24:39.414+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-12T10:28:32.859+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T10:28:33.961+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Output Updated, Code Updated, Service Added&#10;" timestamp="2017-09-12T10:32:08.841+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Input parameter jsonData Added, Inputs updated&#10;" timestamp="2017-09-12T10:32:34.885+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-12T10:36:06.090+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-12T10:36:48.585+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-12T10:39:59.338+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Input parameter jsonData Updated, Inputs updated&#10;" timestamp="2017-09-12T10:40:48.043+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T10:53:05.107+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-12T11:05:33.167+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-12T11:10:00.388+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-12T11:16:09.822+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Input parameter dataa Added, Inputs updated&#10;" timestamp="2017-09-12T11:17:11.573+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T11:17:12.687+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated, timestamp : Updated, sensor_3 : Updated, sensor_4 : Updated, sensor_5 : Updated, sensor_6 : Updated, device_key : Updated, app_version : Updated, client : Updated, node_no : Updated, node_no1 : Updated, node_no2 : Updated, node_no3 : Updated, node_no4 : Updated&#10;" timestamp="2017-09-12T11:24:39.872+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T11:24:40.605+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T11:35:18.793+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T12:31:22.765+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T12:32:34.230+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Input parameter sensor_2 Updated, Inputs updated, Input parameter timestamp Updated&#10;" timestamp="2017-09-12T12:33:38.136+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated, timestamp : Updated, sensor_3 : Updated, sensor_4 : Updated, sensor_5 : Updated, sensor_6 : Updated&#10;" timestamp="2017-09-12T12:50:56.908+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T12:50:58.041+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T12:58:33.289+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-09-12T15:00:26.028+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T15:00:27.135+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated, timestamp : Updated&#10;" timestamp="2017-09-12T15:05:39.289+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T15:05:41.145+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_3 : Updated, sensor_4 : Updated, sensor_5 : Updated, sensor_6 : Updated&#10;" timestamp="2017-09-12T15:07:06.903+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T15:07:07.631+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T15:37:47.465+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Getallprop : Output Updated&#10;" timestamp="2017-09-12T16:48:57.333+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T16:48:58.340+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-12T16:51:21.130+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : device_key : Updated, app_version : Updated, client : Updated, node_no : Updated, node_no1 : Updated, node_no2 : Updated, node_no3 : Updated, node_no4 : Updated&#10;" timestamp="2017-09-13T10:20:55.465+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T10:20:56.390+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : device_key : Updated, app_version : Updated, client : Updated, node_no : Updated, node_no1 : Updated, node_no2 : Updated, node_no3 : Updated, node_no4 : Updated&#10;" timestamp="2017-09-13T10:23:29.147+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T10:23:29.906+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : device_no : Added, device_type : Added&#10;" timestamp="2017-09-13T10:34:28.044+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T10:35:17.899+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T10:35:19.567+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : testchart : Code Updated&#10;" timestamp="2017-09-13T10:37:18.380+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T10:38:59.893+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T10:42:30.273+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T10:44:34.459+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated, sensor_3 : Updated&#10;" timestamp="2017-09-13T12:10:32.125+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:10:33.020+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_3 : Updated, sensor_4 : Updated, sensor_5 : Updated, sensor_6 : Updated&#10;" timestamp="2017-09-13T12:17:59.490+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:18:01.463+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:18:32.382+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:19:07.951+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Input parameter sensor_2 Updated, Inputs updated, Input parameter sensor_3 Updated&#10;" timestamp="2017-09-13T12:21:51.762+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:21:52.727+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T12:54:43.654+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T15:22:24.807+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T15:32:58.901+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T15:37:35.559+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T15:38:29.300+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T15:43:58.879+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : device_key : Updated&#10;" timestamp="2017-09-13T15:45:04.739+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T15:45:22.793+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T15:45:23.503+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T15:49:17.020+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-13T16:14:23.171+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T16:19:00.019+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T16:22:17.400+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-09-13T16:25:08.676+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-19T08:58:26.873+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-19T12:09:39.951+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-20T13:02:20.312+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T09:01:06.896+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T10:16:00.971+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : sensor_2 : Updated&#10;" timestamp="2017-09-21T12:42:45.920+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, sensor_2.Alert : New subscription, Subscription Added&#10;" timestamp="2017-09-21T12:50:06.018+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T12:50:07.326+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T12:55:15.526+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T13:04:14.356+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T13:04:15.518+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T13:05:29.945+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-09-21T13:05:30.807+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated&#10;" timestamp="2017-10-11T07:43:23.347+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated&#10;" timestamp="2017-10-11T11:24:41.652+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-28T22:22:37.824+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Entermyinfo : Code Updated&#10;" timestamp="2017-10-29T10:54:04.954+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T10:22:10.100+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T10:22:11.075+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T10:55:20.975+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-10T23:27:28.147+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-11T19:05:43.398+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter data Added, smwat : Inputs updated, Service Added&#10;" timestamp="2019-02-26T12:30:26.088+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
