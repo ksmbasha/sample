@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2019-03-11T17:18:09.694+05:30" name="smartwatch" projectName="" published="false" tags="" thingTemplate="GenericThing" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="sendata">
+                        <ResultType baseType="JSON" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="sendata">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//posting data
+//var headers = {
+//"content-type": "application/json"
+//};
+var jsomData = {
+ 
+        "current": 320.77,
+    "voltage": 640,
+    "KW": 480.23,
+    "Powerfactor": 80.85,
+    
+  }
+var params = {
+
+url: "http://34.216.151.145/Thingworx/Things/smartwatch/Services/resturl?appkey=0eb56380-58a4-46ea-a1f1-2505666f491c" /* STRING */,
+    //headers :headers,
+content: jsomData /* JSON */,
+//content-type: application/json,
+password: "admin" /* STRING */,
+// timeout: 60000 /* NUMBER */,
+username: "Administrator" /* STRING */
+};
+// result: JSON
+var result = Resources["ContentLoaderFunctions"].PostJSON(params);
+//var result1=JSON.parse(result);
+//logger.warn("jsomdata"+JSON.stringify(result));};
+// result: JSON
+//var result = Resources["ContentLoaderFunctions"].PostJSON(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, thingTemplate : updated&#10;" timestamp="2019-03-11T15:25:27.662+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Service Added&#10;" timestamp="2019-03-11T15:56:15.479+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T16:43:11.500+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T16:45:03.292+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T16:46:23.471+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Output Updated&#10;" timestamp="2019-03-11T16:48:55.236+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T16:56:26.281+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:03:18.175+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:05:44.731+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:12:14.350+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:13:44.837+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:14:01.929+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:16:50.046+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T17:18:09.693+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
