@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2019-03-11T18:07:03.193+05:30" name="smartwatch1" projectName="" published="false" tags="" thingTemplate="GenericThing" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="resturl">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="sendata">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="resturl">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[me.sendata();]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="sendata">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//posting data
+var headers = {
+"Content-Type" : "application/x-www-form-urlencoded",
+"Accept" : "application/json"
+//"content-type": "application/json"
+}
+var jsomData = {
+ "jsonData": {
+        "current": 320.77,
+    "voltage": 640,
+    "KW": 480.23,
+    "Powerfactor": 80.85,
+    
+  }
+}
+var params = {
+
+//url: "http://34.216.151.145/Thingworx/Things/smartwatch/Services/resturl?appkey=0eb56380-58a4-46ea-a1f1-2505666f491c" /* STRING */,
+    headers: headers,
+    url: "http://localhost:8080/Thingworx/Things/smartwatch1/Services/resturl?appkey=0eb56380-58a4-46ea-a1f1-2505666f491c" /* STRING */,
+content: jsomData /* JSON */,
+//content-type: application/json,
+password: "admin" /* STRING */,
+// timeout: 60000 /* NUMBER */,
+username: "Administrator" /* STRING */
+};
+// result: JSON
+var result = Resources["ContentLoaderFunctions"].PostJSON(params);
+//var result1=JSON.parse(result);
+//logger.warn("jsomdata"+JSON.stringify(result));};
+// result: JSON
+//var result = Resources["ContentLoaderFunctions"].PostJSON(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2019-03-11T17:18:27.219+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : resturl : Code Updated, Service Added&#10;" timestamp="2019-03-11T17:20:27.706+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:21:20.555+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T17:21:34.480+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:22:10.241+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T17:26:25.543+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:34:51.983+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Output Updated&#10;" timestamp="2019-03-11T17:35:06.649+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:36:36.466+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated, Output Updated&#10;" timestamp="2019-03-11T17:37:42.412+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:40:05.208+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T17:41:14.230+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T17:41:14.777+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:45:52.904+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : sendata : Code Updated&#10;" timestamp="2019-03-11T17:47:12.768+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T17:58:32.358+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2019-03-11T18:07:03.192+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
